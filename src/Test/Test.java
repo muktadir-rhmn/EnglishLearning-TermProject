@@ -7,7 +7,7 @@ public class Test {
         System.out.println("hell");
     }
 
-    public static String getTextBox(){
+    /*public static String getTextBox(){
     <!--word text box-->
             <div class="form-group">
                 <label for="word" class="control-label col-sm-1">Word</label>
@@ -17,5 +17,5 @@ public class Test {
             </div>
             <!--/word text box-->
         return null;
-    }
+    }*/
 }
