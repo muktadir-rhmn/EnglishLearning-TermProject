@@ -20,9 +20,9 @@ public class WordGroup {
         this.word_group_id = word_group_id;
         this.word_group_title = word_group_title;
     }
-    int get_entity_id(){return entity_id;}
-    String get_entity_level_title(){return entity_level_title;}
-    int get_word_group_id(){return word_group_id;}
-    String get_word_group_title(){return word_group_title;}
+    public int get_entity_id(){return entity_id;}
+    public String get_entity_level_title(){return entity_level_title;}
+    public int get_word_group_id(){return word_group_id;}
+    public String get_word_group_title(){return word_group_title;}
 }
 

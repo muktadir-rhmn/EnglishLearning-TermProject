@@ -3,6 +3,12 @@ package org.apache.jsp.Admin;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.Comparator;
+import java.util.Collections;
+import Model.WordGroup;
+import java.util.ArrayList;
+import java.util.ArrayList;
+import Database.DataAccess;
 
 public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -43,6 +49,12 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("New Word", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newWordSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()), out, false);
       out.write('\r');
       out.write('\n');
@@ -61,8 +73,61 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"col-sm-8\">\r\n");
       out.write("                    <select name=\"group\" id=\"group\" class=\"form-control\">\r\n");
       out.write("                        <!--Arnob: fetch word groups and word levels-->\r\n");
-      out.write("                        <option value=\"1\">Basic</option>\r\n");
-      out.write("                        <option value=\"1\">------Fruit Names</option>\r\n");
+      out.write("                        ");
+
+                        DataAccess db = DataAccess.getDataAccess();
+                        ArrayList<WordGroup> List = db.levelListWord();
+                        Collections.sort(List, new Comparator<WordGroup>() {
+                            @Override
+                            public int compare(WordGroup  word, WordGroup  word1) {
+                                return word.get_entity_level_title().compareTo(word1.get_entity_level_title());
+                            }
+                        });
+                        String tempName = "";
+                        int tempID;
+                        tempID = List.get(0).get_entity_id();
+                        tempName = List.get(0).get_entity_level_title();
+                        
+      out.write("\r\n");
+      out.write("                        <option value = ");
+      out.print(tempID);
+      out.write('>');
+      out.print(tempName);
+      out.write("</option>\r\n");
+      out.write("                        ");
+
+                        for(int i = 0; i < List.size(); i++){
+                            if(tempName!=List.get(i).get_entity_level_title()){
+                                tempName = List.get(i).get_entity_level_title();
+                                tempID = List.get(i).get_entity_id();
+                        
+      out.write("\r\n");
+      out.write("                               <option value = ");
+      out.print(tempID);
+      out.write('>');
+      out.print(tempName);
+      out.write("</option> \r\n");
+      out.write("                        ");
+
+                            }
+                        
+      out.write("\r\n");
+      out.write("                        ");
+
+                            int groupID = List.get(i).get_word_group_id();
+                            String groupName = List.get(i).get_word_group_title();
+                        
+      out.write("\r\n");
+      out.write("                            <option value = ");
+      out.print(groupID);
+      out.write(">-----");
+      out.print(groupName);
+      out.write("</option> \r\n");
+      out.write("                        ");
+
+                        }
+                        
+      out.write("\r\n");
       out.write("                    </select>\r\n");
       out.write("\r\n");
       out.write("                </div>\r\n");
@@ -137,11 +202,44 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("                        <!--Word levels-->\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
-      out.write("                            <label for=\"wordLevel\" class=\"control-label col-sm-4\">Group</label>\r\n");
+      out.write("                            <label for=\"wordLevel\" class=\"control-label col-sm-4\">Level</label>\r\n");
       out.write("                            <div class=\"col-sm-6\">\r\n");
       out.write("                                <select name=\"wordLevel\" id=\"wordLevel\" class=\"form-control\">\r\n");
       out.write("                                    <!--Arnob: fetche the word levels from database-->\r\n");
-      out.write("                                    <option value=\"1\">Basic</option>\r\n");
+      out.write("                                    ");
+
+                                    DataAccess db1 = DataAccess.getDataAccess();
+                                    ArrayList<WordGroup> List1 = db1.levelListWord();
+                                    Collections.sort(List1, new Comparator<WordGroup>() {
+                                        @Override
+                                        public int compare(WordGroup  word, WordGroup  word1) {
+                                            return word.get_entity_level_title().compareTo(word1.get_entity_level_title());
+                                        }
+                                    });
+                                    String tempName1 = "";
+                                    int tempID1;
+                                    
+                                    for(int i = 0; i < List1.size(); i++){
+                                        if(tempName1!=List1.get(i).get_entity_level_title()){
+                                            tempName1 = List1.get(i).get_entity_level_title();
+                                            tempID1 = List1.get(i).get_entity_id();
+                                    
+      out.write("\r\n");
+      out.write("                                           <option value = ");
+      out.print(tempID1);
+      out.write('>');
+      out.print(tempName1);
+      out.write("</option> \r\n");
+      out.write("                                    ");
+
+                                        }
+                                    
+      out.write("\r\n");
+      out.write("                                    ");
+
+                                    }
+                                    
+      out.write("\r\n");
       out.write("                                </select>\r\n");
       out.write("\r\n");
       out.write("                            </div>\r\n");

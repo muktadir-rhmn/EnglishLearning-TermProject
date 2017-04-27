@@ -42,15 +42,15 @@ public class DataAccess {
             ResultSet rs = stmt.executeQuery();
             while(rs.next())
             {
-                String query1 = "select TITLE from WORD_GROUP where level_id = ?";
+                String query1 = "select TITLE,word_group_id from WORD_GROUP where level_id = ?";
                 String levelName = rs.getString("level_title");
                 int levelID = rs.getInt("ENTITY_LEVEL_ID");
                 PreparedStatement stmt1 = cnn.prepareStatement(query1);
-                stmt1.setInt(0, levelID);
+                stmt1.setInt(1, levelID);
                 ResultSet rs1 = stmt1.executeQuery();
                 while(rs1.next()){
                     String word_group = rs1.getString("title");
-                    int word_group_id = rs1.getInt("work_group_id");
+                    int word_group_id = rs1.getInt("word_group_id");
                     WordGroup obj = new WordGroup(levelID, levelName, word_group_id, word_group);
                     temp.add(obj);
                 }

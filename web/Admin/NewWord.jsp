@@ -4,6 +4,8 @@
     Author     : MUKTADIR
 --%>
 
+<%@page import="java.util.Comparator"%>
+<%@page import="java.util.Collections"%>
 <%@page import="Model.WordGroup"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.ArrayList"%>
@@ -30,12 +32,36 @@
                         <%
                         DataAccess db = DataAccess.getDataAccess();
                         ArrayList<WordGroup> List = db.levelListWord();
+                        Collections.sort(List, new Comparator<WordGroup>() {
+                            @Override
+                            public int compare(WordGroup  word, WordGroup  word1) {
+                                return word.get_entity_level_title().compareTo(word1.get_entity_level_title());
+                            }
+                        });
+                        String tempName = "";
+                        int tempID;
+                        tempID = List.get(0).get_entity_id();
+                        tempName = List.get(0).get_entity_level_title();
+                        %>
+                        <option value = <%=tempID%>><%=tempName%></option>
+                        <%
                         for(int i = 0; i < List.size(); i++){
-                            System.out.print(List.get(i));
+                            if(tempName!=List.get(i).get_entity_level_title()){
+                                tempName = List.get(i).get_entity_level_title();
+                                tempID = List.get(i).get_entity_id();
+                        %>
+                               <option value = <%=tempID%>><%=tempName%></option> 
+                        <%
+                            }
+                        %>
+                        <%
+                            int groupID = List.get(i).get_word_group_id();
+                            String groupName = List.get(i).get_word_group_title();
+                        %>
+                            <option value = <%=groupID%>>-----<%=groupName%></option> 
+                        <%
                         }
                         %>
-                        <option value="1">Basic</option>
-                        <option value="1">------Fruit Names</option>
                     </select>
 
                 </div>
@@ -114,7 +140,30 @@ s                <div class="col-sm-2">
                             <div class="col-sm-6">
                                 <select name="wordLevel" id="wordLevel" class="form-control">
                                     <!--Arnob: fetche the word levels from database-->
-                                    <option value="1">Basic</option>
+                                    <%
+                                    DataAccess db1 = DataAccess.getDataAccess();
+                                    ArrayList<WordGroup> List1 = db1.levelListWord();
+                                    Collections.sort(List1, new Comparator<WordGroup>() {
+                                        @Override
+                                        public int compare(WordGroup  word, WordGroup  word1) {
+                                            return word.get_entity_level_title().compareTo(word1.get_entity_level_title());
+                                        }
+                                    });
+                                    String tempName1 = "";
+                                    int tempID1;
+                                    
+                                    for(int i = 0; i < List1.size(); i++){
+                                        if(tempName1!=List1.get(i).get_entity_level_title()){
+                                            tempName1 = List1.get(i).get_entity_level_title();
+                                            tempID1 = List1.get(i).get_entity_id();
+                                    %>
+                                           <option value = <%=tempID1%>><%=tempName1%></option> 
+                                    <%
+                                        }
+                                    %>
+                                    <%
+                                    }
+                                    %>
                                 </select>
 
                             </div>
