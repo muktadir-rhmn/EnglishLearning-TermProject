@@ -17,7 +17,6 @@
 <%-- ******************************************************** --%>
 
 
-
 <div class="row">
     <div class="col-lg-6">
         <!-- body of the page-->
@@ -104,19 +103,15 @@ s                <div class="col-sm-2">
 
 
 
-            <br>
-            <div class="form-group">
-                <div class="control-label col-sm-2"></div>
-                <div class="col-sm-10">
-                    <input type="submit" value="Add Word" class="btn btn-primary"/>
-                </div>
-            </div>
-            <br/>
-        </form>
+    <br>
+    <div class="form-group">
+        <div class="control-label col-sm-2"></div>
+        <div class="col-sm-10">
+            <input type="submit" value="Add Word" class="btn btn-primary"/>
+        </div>
     </div>
-</div>
-<!-- /.container-fluid -->
-
+    <br/>
+</form>
 
 <!-- Modal for creating new level-->
 <div class="modal fade" id="myModal" role="dialog">
@@ -202,7 +197,7 @@ s                <div class="col-sm-2">
 
 
 <!-- Modal for creating new level-->
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="newWordLevel" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -214,21 +209,21 @@ s                <div class="col-sm-2">
             <div class="modal-body">
 
                 <!--Level from-->
-                <form action="Admin/NewWordGroup.do" class="form-horizontal">
+                <form action="Admin/NewWordLevel.do" class="form-horizontal">
                     <fieldset>
                         <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="groupTitle">Title</label>
+                            <label class="col-md-4 control-label" for="wordlevel1">Title</label>
                             <div class="col-md-6">
-                                <input id="groupTitle" name="groupTitle" type="text" placeholder="title" class="form-control input-md" required="">
+                                <input id="wordlevel1" name="level" type="text" placeholder="Word Level" class="form-control input-md" required="">
                             </div>
                         </div>
                         <!-- /Text input-->
                         <!-- Button -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="btnNewGroup"></label>
+                            <label class="col-md-4 control-label" for=></label>
                             <div class="col-md-4">
-                                <input type="submit" value="Create Group" id="btnNewGroup" class="btn btn-primary"/>
+                                <input type="submit" value="Create Level" class="btn btn-primary"/>
                             </div>
                         </div>
                     </fieldset>

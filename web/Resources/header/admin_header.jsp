@@ -171,7 +171,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#sectionLesson"><span class="glyphicon glyphicon-book"></span> Lessons <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="sectionLesson">
                             <li >
-                                <a href="" ><span class="glyphicon glyphicon-pencil"> </span></i> New Lesson</a>
+                                <a href="NewLesson.jsp" ><span class="glyphicon glyphicon-pencil"> </span></i> New Lesson</a>
                             </li>
                             <li>
                                 <a href=""><span class="glyphicon glyphicon-th-list"> </span></i> View Lessons</a>
@@ -182,7 +182,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#sectionVocabulary"><span class="glyphicon glyphicon-th"></span> Vocabulary <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="sectionVocabulary" >
                             <li>
-                                <a href=""><span class="glyphicon glyphicon-pencil"> </span></i> New Word</a>
+                                <a href="NewWord.jsp"><span class="glyphicon glyphicon-pencil"> </span></i> New Word</a>
                             </li>
                             <li>
                                 <a href=""><span class="glyphicon glyphicon-th-list"> </span></i> Search Word</a>

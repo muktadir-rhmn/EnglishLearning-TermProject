@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DataAccess {
-    private String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
+    private String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
     private String userName = "project";
     private String password = "123";
     private Connection cnn = null; //private bcoz if we make it public, we may mistakenly disconnect this connection
@@ -77,6 +77,7 @@ public class DataAccess {
             e.printStackTrace();
             return null;
         }
+        System.out.println("A");
         return temp;
     }    
     
