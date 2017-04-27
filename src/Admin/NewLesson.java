@@ -1,7 +1,9 @@
 package Admin;
 
+import Database.DataAccess;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,7 +19,6 @@ public class NewLesson extends HttpServlet {
     throws ServletException, IOException{
         PrintWriter out = res.getWriter();
         HttpSession session = req.getSession();
-        
         //String name = req.getParameter("name");
         
     } 

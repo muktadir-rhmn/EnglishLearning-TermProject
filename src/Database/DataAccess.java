@@ -1,9 +1,10 @@
 package Database;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 public class DataAccess {
-    private String dbURL = "jdbc:oracle:thin:@localhost:1521:XE";
+    private String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
     private String userName = "project";
     private String password = "123";
     private Connection cnn = null; //private bcoz if we make it public, we may mistakenly disconnect this connection
@@ -31,6 +32,24 @@ public class DataAccess {
             e.printStackTrace();
         }
     }
+    
+    public ArrayList<String> levelList(){
+        ArrayList<String> temp = new ArrayList<>();
+        try{
+            String query = "select level_title from entity_level";
+            PreparedStatement stmt = cnn.prepareStatement(query);
+            ResultSet rs = stmt.executeQuery();
+            while(rs.next())
+            {
+                String levelName = rs.getString("level_title");
+                temp.add(levelName);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+            return null;
+        }
+        return temp;
+    }    
     
     public PreparedStatement getStatement(String sql) throws SQLException{
         return cnn.prepareStatement(sql);

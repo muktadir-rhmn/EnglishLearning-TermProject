@@ -5,6 +5,7 @@ import Database.DataAccess;
 public class Test {
     public static void main(String[] args){
         System.out.println("hell");
+        DataAccess obj = DataAccess.getDataAccess();
     }
 
     /*public static String getTextBox(){

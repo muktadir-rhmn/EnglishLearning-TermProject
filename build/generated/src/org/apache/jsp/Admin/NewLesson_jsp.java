@@ -3,6 +3,8 @@ package org.apache.jsp.Admin;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
+import Database.DataAccess;
 
 public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -41,6 +43,8 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\r\n");
+      out.write("\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("New Lesson", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newLessonSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("sectionVocabulary", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("collapse", request.getCharacterEncoding()), out, false);
       out.write('\r');
       out.write('\n');
@@ -56,7 +60,23 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"col-sm-9\">\r\n");
       out.write("            <select name=\"level\" id=\"level\" class=\"form-control\">\r\n");
       out.write("                <!--To Arnob: Get levels from database and print like the following-->\r\n");
-      out.write("                <option value=\"1\">Basic</option>\r\n");
+      out.write("                ");
+
+                    DataAccess db = DataAccess.getDataAccess();
+                    ArrayList<String> List = db.levelList();
+                    for(int i = 0; i < List.size(); i++){
+                        String name = List.get(i);
+                
+      out.write("\r\n");
+      out.write("                        <option value=i>");
+      out.print(name);
+      out.write("</option>\r\n");
+      out.write("                ");
+
+                    }
+                
+      out.write("\r\n");
+      out.write("                \r\n");
       out.write("            </select>\r\n");
       out.write("            <!-- Trigger the modal with a button -->\r\n");
       out.write("        </div>\r\n");
