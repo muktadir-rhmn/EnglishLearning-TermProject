@@ -169,7 +169,7 @@
 
                     <li class="${param.newLessonSideBar}">
                         <a href="javascript:;" data-toggle="collapse" data-target="#sectionLesson"><span class="glyphicon glyphicon-book"></span> Lessons <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="sectionLesson" class="${param.sectionLesson}">
+                        <ul id="sectionLesson">
                             <li >
                                 <a href="" ><span class="glyphicon glyphicon-pencil"> </span></i> New Lesson</a>
                             </li>
@@ -178,9 +178,9 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="${param.newWordSideBar}">
                         <a href="javascript:;" data-toggle="collapse" data-target="#sectionVocabulary"><span class="glyphicon glyphicon-th"></span> Vocabulary <i class="fa fa-fw fa-caret-down"></i></a>
-                        <ul id="sectionVocabulary" class="${param.sectionVocabulary}">
+                        <ul id="sectionVocabulary" >
                             <li>
                                 <a href=""><span class="glyphicon glyphicon-pencil"> </span></i> New Word</a>
                             </li>
