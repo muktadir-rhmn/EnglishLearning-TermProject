@@ -19,7 +19,7 @@
                 <!--To Arnob: Get levels from database and print like the following-->
                 <%
                     DataAccess db = DataAccess.getDataAccess();
-                    ArrayList<String> List = db.levelList();
+                    ArrayList<String> List = db.levelListLesson();
                     for(int i = 0; i < List.size(); i++){
                         String name = List.get(i);
                 %>

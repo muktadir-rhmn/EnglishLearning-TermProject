@@ -63,7 +63,7 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                ");
 
                     DataAccess db = DataAccess.getDataAccess();
-                    ArrayList<String> List = db.levelList();
+                    ArrayList<String> List = db.levelListLesson();
                     for(int i = 0; i < List.size(); i++){
                         String name = List.get(i);
                 

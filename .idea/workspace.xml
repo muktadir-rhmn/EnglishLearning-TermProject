@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56b89044-9cc0-486a-9b35-81e933af2551" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/classes/org/apache/jsp/Admin/EnterPractices_jsp.class" afterPath="$PROJECT_DIR$/build/generated/classes/org/apache/jsp/Admin/EnterPractices_jsp.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Model/WordGroup.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/WordGroup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Database/DataAccess.class" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Database/DataAccess.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Practice/JumbleSentence.class" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Practice/JumbleSentence.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Test/Test.class" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Test/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/EnterPractices_jsp.class.smap" afterPath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/EnterPractices_jsp.class.smap" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/EnterPractices_jsp.java" afterPath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/EnterPractices_jsp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/NewLesson_jsp.java" afterPath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/NewLesson_jsp.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/Admin/EnterPractices.jsp" afterPath="$PROJECT_DIR$/build/web/Admin/EnterPractices.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/Admin/NewLesson.jsp" afterPath="$PROJECT_DIR$/build/web/Admin/NewLesson.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/Admin/NewWord.jsp" afterPath="$PROJECT_DIR$/build/web/Admin/NewWord.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/ant-deploy.xml" afterPath="$PROJECT_DIR$/nbproject/ant-deploy.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/nbproject/private/private.properties" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Database/DataAccess.java" afterPath="$PROJECT_DIR$/src/Database/DataAccess.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test/Test.java" afterPath="$PROJECT_DIR$/src/Test/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Admin/EnterPractices.jsp" afterPath="$PROJECT_DIR$/web/Admin/EnterPractices.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Admin/NewLesson.jsp" afterPath="$PROJECT_DIR$/web/Admin/NewLesson.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Admin/NewWord.jsp" afterPath="$PROJECT_DIR$/web/Admin/NewWord.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,18 +40,38 @@
       <file leaf-file-name="NewWord.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Admin/NewWord.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="1309">
+              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EnterPractices.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Test/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewLesson.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/Admin/NewLesson.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnterPractices.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Admin/EnterPractices.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="398">
-              <caret line="81" column="4" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding>
                 <element signature="e#1858#1883#0#HTML" expanded="true" />
               </folding>
@@ -91,12 +122,12 @@
         <option value="$PROJECT_DIR$/web/Resources/footer/admin_footer.jsp" />
         <option value="$PROJECT_DIR$/src/Practice/Pair.java" />
         <option value="$PROJECT_DIR$/src/Practice/JumbleSentence.java" />
-        <option value="$PROJECT_DIR$/src/Test/Test.java" />
         <option value="$PROJECT_DIR$/web/Resources/header/admin_header.jsp" />
         <option value="$PROJECT_DIR$/web/Admin/NewLesson.jsp" />
         <option value="$PROJECT_DIR$/src/Database/DataAccess.java" />
-        <option value="$PROJECT_DIR$/web/Admin/NewWord.jsp" />
         <option value="$PROJECT_DIR$/web/Admin/EnterPractices.jsp" />
+        <option value="$PROJECT_DIR$/web/Admin/NewWord.jsp" />
+        <option value="$PROJECT_DIR$/src/Test/Test.java" />
       </list>
     </option>
   </component>
@@ -626,12 +657,12 @@
       <workItem from="1493199079374" duration="5416000" />
       <workItem from="1493210160462" duration="2691000" />
       <workItem from="1493262560780" duration="3438000" />
-      <workItem from="1493271116153" duration="12555000" />
+      <workItem from="1493271116153" duration="12784000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32325000" />
+    <option name="totallyTimeSpent" value="32554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1032" height="732" extended-state="0" />
@@ -992,28 +1023,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Admin/NewLesson.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Database/DataAccess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="40" column="44" lean-forward="false" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="44" />
           <folding>
-            <marker date="1493299929312" expanded="true" signature="1269:1305" ph="select level... entity_level" />
+            <marker date="1493306219955" expanded="true" signature="1269:1305" ph="select level... entity_level" />
           </folding>
         </state>
       </provider>
@@ -1034,14 +1049,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Admin/NewWord.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -1053,10 +1060,34 @@
     <entry file="file://$PROJECT_DIR$/web/Admin/EnterPractices.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
-          <caret line="81" column="4" lean-forward="false" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding>
             <element signature="e#1858#1883#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Admin/NewWord.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1309">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Admin/NewLesson.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="21" column="53" lean-forward="true" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
