@@ -111,7 +111,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </select>\r\n");
       out.write("\r\n");
       out.write("                </div>\r\n");
-      out.write("s                <div class=\"col-sm-2\">\r\n");
+      out.write("                <div class=\"col-sm-2\">\r\n");
       out.write("                    <!-- Trigger the modal with a button -->\r\n");
       out.write("                    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><span class=\"glyphicon glyphicon-plus\"></span></button>\r\n");
       out.write("                </div>\r\n");
