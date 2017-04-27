@@ -4,6 +4,10 @@
     Author     : MUKTADIR
 --%>
 
+<%@page import="Model.WordGroup"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Database.DataAccess"%>
 <jsp:include page="../Resources/header/admin_header.jsp">
     <jsp:param name="title" value="New Word" />
     <jsp:param name="newWordSideBar" value="active" />
@@ -23,6 +27,13 @@
                 <div class="col-sm-8">
                     <select name="group" id="group" class="form-control">
                         <!--Arnob: fetch word groups and word levels-->
+                        <%
+                        DataAccess db = DataAccess.getDataAccess();
+                        ArrayList<WordGroup> List = db.levelListWord();
+                        for(int i = 0; i < List.size(); i++){
+                            System.out.print(List.get(i));
+                        }
+                        %>
                         <option value="1">Basic</option>
                         <option value="1">------Fruit Names</option>
                     </select>
@@ -99,7 +110,7 @@ s                <div class="col-sm-2">
 
                         <!--Word levels-->
                         <div class="form-group">
-                            <label for="wordLevel" class="control-label col-sm-4">Group</label>
+                            <label for="wordLevel" class="control-label col-sm-4">Level</label>
                             <div class="col-sm-6">
                                 <select name="wordLevel" id="wordLevel" class="form-control">
                                     <!--Arnob: fetche the word levels from database-->

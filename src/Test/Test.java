@@ -28,11 +28,11 @@ public class Test {
         StringSelection stringSelection = new StringSelection(s);
         Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
         clpbrd.setContents(stringSelection, null);
-
-    public static void main(String[] args){
+    }
+    /*public static void main(String[] args){
         System.out.println("hell");
         DataAccess obj = DataAccess.getDataAccess();
-    }
+    }*/
 
     public static String getTextBox(String name){
 
