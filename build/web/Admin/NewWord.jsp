@@ -30,41 +30,30 @@
                         <!--Arnob: fetch word groups and word levels-->
                         <%
                         DataAccess db = DataAccess.getDataAccess();
-                        ArrayList<WordGroup> List = db.levelListWord();
-                        Collections.sort(List, new Comparator<WordGroup>() {
-                            @Override
-                            public int compare(WordGroup  word, WordGroup  word1) {
-                                return word.get_entity_level_title().compareTo(word1.get_entity_level_title());
+                        ArrayList<WordGroup> levelList = db.getWordLevels();
+
+                        %>
+                        <%
+                        for(WordGroup t : levelList){
+                            ArrayList<WordGroup> groups = db.getWordGroups(t.get_entity_id());
+                            if(groups.isEmpty()) continue;
+                            
+                        %>
+                               <option><%=t.get_entity_level_title()%></option> 
+                        <%
+                            for(WordGroup g: groups){
+                        %>
+                            <option value = "<%=g.get_word_group_id()%>">-----<%=g.get_word_group_title()%></option> 
+                        <%    
+                        
                             }
-                        });
-                        String tempName = "";
-                        int tempID;
-                        tempID = List.get(0).get_entity_id();
-                        tempName = List.get(0).get_entity_level_title();
-                        %>
-                        <option value = <%=tempID%>><%=tempName%></option>
-                        <%
-                        for(int i = 0; i < List.size(); i++){
-                            if(tempName!=List.get(i).get_entity_level_title()){
-                                tempName = List.get(i).get_entity_level_title();
-                                tempID = List.get(i).get_entity_id();
-                        %>
-                               <option value = <%=tempID%>><%=tempName%></option> 
-                        <%
-                            }
-                        %>
-                        <%
-                            int groupID = List.get(i).get_word_group_id();
-                            String groupName = List.get(i).get_word_group_title();
-                        %>
-                            <option value = <%=groupID%>>-----<%=groupName%></option> 
-                        <%
+                                                
                         }
                         %>
                     </select>
 
                 </div>
-s                <div class="col-sm-2">
+                <div class="col-sm-2">
                     <!-- Trigger the modal with a button -->
                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span></button>
                 </div>
@@ -137,27 +126,14 @@ s                <div class="col-sm-2">
                                     <!--Arnob: fetche the word levels from database-->
                                     <%
                                     DataAccess db1 = DataAccess.getDataAccess();
-                                    ArrayList<WordGroup> List1 = db1.levelListWord();
-                                    Collections.sort(List1, new Comparator<WordGroup>() {
-                                        @Override
-                                        public int compare(WordGroup  word, WordGroup  word1) {
-                                            return word.get_entity_level_title().compareTo(word1.get_entity_level_title());
-                                        }
-                                    });
                                     String tempName1 = "";
                                     int tempID1;
                                     
-                                    for(int i = 0; i < List1.size(); i++){
-                                        if(tempName1!=List1.get(i).get_entity_level_title()){
-                                            tempName1 = List1.get(i).get_entity_level_title();
-                                            tempID1 = List1.get(i).get_entity_id();
+                                    for(WordGroup t: levelList){
                                     %>
-                                           <option value = <%=tempID1%>><%=tempName1%></option> 
+                                            <option value="<%=t.get_entity_id()%>"><%=t.get_entity_level_title()%></option> 
                                     <%
                                         }
-                                    %>
-                                    <%
-                                    }
                                     %>
                                 </select>
 

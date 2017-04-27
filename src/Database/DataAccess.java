@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DataAccess {
-    private String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
+    private String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
     private String userName = "project";
     private String password = "123";
     private Connection cnn = null; //private bcoz if we make it public, we may mistakenly disconnect this connection
@@ -34,7 +34,7 @@ public class DataAccess {
         }
     }
     
-    public ArrayList<WordGroup> levelListWord(){
+    public ArrayList<WordGroup> getWordLevels(){
         ArrayList<WordGroup> temp = new ArrayList<>();
         try{
             String query = "select level_title, ENTITY_LEVEL_ID from entity_level where entity_type = 0";
@@ -42,18 +42,13 @@ public class DataAccess {
             ResultSet rs = stmt.executeQuery();
             while(rs.next())
             {
-                String query1 = "select TITLE,word_group_id from WORD_GROUP where level_id = ?";
+                
                 String levelName = rs.getString("level_title");
                 int levelID = rs.getInt("ENTITY_LEVEL_ID");
-                PreparedStatement stmt1 = cnn.prepareStatement(query1);
-                stmt1.setInt(1, levelID);
-                ResultSet rs1 = stmt1.executeQuery();
-                while(rs1.next()){
-                    String word_group = rs1.getString("title");
-                    int word_group_id = rs1.getInt("word_group_id");
-                    WordGroup obj = new WordGroup(levelID, levelName, word_group_id, word_group);
-                    temp.add(obj);
-                }
+            
+                WordGroup obj = new WordGroup(levelID, levelName, -999, "");
+                temp.add(obj);
+       
             }
         }catch(Exception e){
             e.printStackTrace();
@@ -61,6 +56,22 @@ public class DataAccess {
         }
         return temp;
     }  
+    
+    public ArrayList<WordGroup> getWordGroups(int level) throws SQLException{     
+                ArrayList<WordGroup> list = new ArrayList();
+                String query1 = "select TITLE,word_group_id from WORD_GROUP where level_id = ?";
+                PreparedStatement stmt1 = cnn.prepareStatement(query1);
+                stmt1.setInt(1, level);
+                ResultSet rs1 = stmt1.executeQuery();
+                
+                while(rs1.next()){
+                    String word_group = rs1.getString("title");
+                    int word_group_id = rs1.getInt("word_group_id");
+                    WordGroup obj = new WordGroup(-999, "", word_group_id, word_group);
+                    list.add(obj);
+                }
+                return list;
+    }
     
     public ArrayList<String> levelListLesson(){
         ArrayList<String> temp = new ArrayList<>();
