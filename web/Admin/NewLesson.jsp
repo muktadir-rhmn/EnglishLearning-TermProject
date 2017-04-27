@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Database.DataAccess"%>
 <jsp:include page="../Resources/header/admin_header.jsp">
     <jsp:param name="title" value="New Lesson" />
     <jsp:param name="newLessonSideBar" value="active" />
@@ -15,7 +17,17 @@
         <div class="col-sm-9">
             <select name="level" id="level" class="form-control">
                 <!--To Arnob: Get levels from database and print like the following-->
-                <option value="1">Basic</option>
+                <%
+                    DataAccess db = DataAccess.getDataAccess();
+                    ArrayList<String> List = db.levelList();
+                    for(int i = 0; i < List.size(); i++){
+                        String name = List.get(i);
+                %>
+                        <option value=i><%=name%></option>
+                <%
+                    }
+                %>
+                
             </select>
             <!-- Trigger the modal with a button -->
         </div>

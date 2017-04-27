@@ -14,6 +14,7 @@ import java.util.Scanner;
 
 
 public class Test {
+
     public static void main(String[] args) throws FileNotFoundException {
        JumbleSentence js = new JumbleSentence();
        LinkedList<Pair> list = js.getJumbledSentences(new File("C:\\Users\\MUKTADIR\\Documents\\NetBeansProjects\\html parsing\\test.txt"));
@@ -27,6 +28,10 @@ public class Test {
         StringSelection stringSelection = new StringSelection(s);
         Clipboard clpbrd = Toolkit.getDefaultToolkit().getSystemClipboard();
         clpbrd.setContents(stringSelection, null);
+
+    public static void main(String[] args){
+        System.out.println("hell");
+        DataAccess obj = DataAccess.getDataAccess();
     }
 
     public static String getTextBox(String name){
