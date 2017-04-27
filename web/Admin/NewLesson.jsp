@@ -23,7 +23,7 @@
                     for(int i = 0; i < List.size(); i++){
                         String name = List.get(i);
                 %>
-                        <option value=i><%=name%></option>
+                        <option value=<%=i%>><%=name%></option>
                 <%
                     }
                 %>

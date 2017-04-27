@@ -68,7 +68,9 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
                         String name = List.get(i);
                 
       out.write("\r\n");
-      out.write("                        <option value=i>");
+      out.write("                        <option value=");
+      out.print(i);
+      out.write('>');
       out.print(name);
       out.write("</option>\r\n");
       out.write("                ");
