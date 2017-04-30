@@ -32,6 +32,14 @@ public class NewLesson extends HttpServlet {
             Lesson obj2 = new Lesson(title, body, 0, 1);
             obj2.insertLesson();
         }
+        else if(result == 1){
+            Lesson obj2 = new Lesson(title, body, 1, 1);
+            obj2.insertLesson();
+        }
+        else if(result == 2){
+           Lesson obj2 = new Lesson(title, body, 2, 1);
+           obj2.insertLesson();
+        }
     } 
 
   
