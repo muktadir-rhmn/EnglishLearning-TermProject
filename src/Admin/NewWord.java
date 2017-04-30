@@ -20,6 +20,7 @@ public class NewWord extends HttpServlet {
         
         //String name = req.getParameter("name");
         //Arnob: insert the word into the database
+        
     } 
 
   

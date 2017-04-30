@@ -1,6 +1,9 @@
 package Admin;
 
 import Database.DataAccess;
+import Model.Entity;
+import Model.EntityLevel;
+import Model.Lesson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -19,8 +22,16 @@ public class NewLesson extends HttpServlet {
     throws ServletException, IOException{
         PrintWriter out = res.getWriter();
         HttpSession session = req.getSession();
-        //String name = req.getParameter("name");
         
+        String level = req.getParameter("level");
+        Integer result = Integer.valueOf(level);
+        String title = req.getParameter("title");
+        String body = req.getParameter("body");
+        Entity obj = new Entity();
+        if(result == 0){
+            Lesson obj2 = new Lesson(title, body, 0, 1);
+            obj2.insertLesson();
+        }
     } 
 
   

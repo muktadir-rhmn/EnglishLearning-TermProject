@@ -79,7 +79,7 @@
             </div>
             <br/>
             <!--/meaning text box-->
-
+               
             <!--example text box-->
             <div class="form-group">
                 <label for="examples" class="control-label col-sm-2">Examples</label>

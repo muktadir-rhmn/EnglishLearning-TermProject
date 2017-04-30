@@ -51,7 +51,7 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("<form action=\"NewLesson.do\" method=\"post\" class=\"form-horizontal\">\r\n");
+      out.write("<form action=\"NewLesson.do\" method=\"get\" class=\"form-horizontal\">\r\n");
       out.write("    <!--level selection-->\r\n");
       out.write("    <div class=\"form-group\">\r\n");
       out.write("        <div class=\"col-sm-1\">\r\n");
@@ -89,7 +89,7 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <!--/level selection-->\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
+      out.write("    <input type=\"hidden\" name=\"body\" value=\"fjasdlfk\"/>\r\n");
       out.write("    <!--Title text box-->\r\n");
       out.write("    <div class=\"form-group\">\r\n");
       out.write("        <label for=\"title\" class=\"control-label col-sm-1\">Title</label>\r\n");
@@ -104,7 +104,7 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <!--Text Editor-->\r\n");
       out.write("    <div id=\"editor\">\r\n");
       out.write("        <label for=\"edit\" >Lesson</label>\r\n");
-      out.write("        <textarea name=\"body\" id=\"edit\"> </textarea>\r\n");
+      out.write("        <textarea id=\"edit\"> </textarea>\r\n");
       out.write("    </div>\r\n");
       out.write("    <!--/Text Editor-->\r\n");
       out.write("    <br>\r\n");

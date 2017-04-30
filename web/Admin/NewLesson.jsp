@@ -8,7 +8,7 @@
 <%-- ******************************************************** --%>
 
 
-<form action="NewLesson.do" method="post" class="form-horizontal">
+<form action="NewLesson.do" method="get" class="form-horizontal">
     <!--level selection-->
     <div class="form-group">
         <div class="col-sm-1">
@@ -38,7 +38,7 @@
     <!--/level selection-->
 
 
-
+    <input type="hidden" name="body" value="fjasdlfk"/>
     <!--Title text box-->
     <div class="form-group">
         <label for="title" class="control-label col-sm-1">Title</label>
@@ -53,7 +53,7 @@
     <!--Text Editor-->
     <div id="editor">
         <label for="edit" >Lesson</label>
-        <textarea name="body" id="edit"> </textarea>
+        <textarea id="edit"> </textarea>
     </div>
     <!--/Text Editor-->
     <br>
