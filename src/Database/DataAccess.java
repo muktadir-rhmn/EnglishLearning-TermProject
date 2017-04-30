@@ -129,6 +129,34 @@ public class DataAccess {
         }
     }
     
+    public void insertWord(int entityID, String word, String meaning, String partsofSpeech, int wordGroupID){
+        try{
+            String insertCommand = "insert into word values(?,?,?,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, entityID);
+            stmt.setString(2, word);
+            stmt.setString(3, meaning);
+            stmt.setString(4, partsofSpeech);
+            stmt.setInt(5, wordGroupID);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void insertWordExample(int entityID, String sentence){
+        try{
+            String insertCommand = "insert into WORD_EXAMPLE values(word_example_id_seq.NEXTVAL,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, entityID);
+            stmt.setString(2, sentence);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    
     public int getEnityId(){
         try{
             String insertCommand = "SELECT entity_ID_SEQ.CURRVAL FROM DUAL"; 
@@ -158,6 +186,7 @@ public class DataAccess {
         }
         return 0;
     }
+    
     
     public PreparedStatement getStatement(String sql) throws SQLException{
         return cnn.prepareStatement(sql);

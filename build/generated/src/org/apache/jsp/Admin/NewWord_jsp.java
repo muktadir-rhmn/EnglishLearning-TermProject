@@ -64,7 +64,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<div class=\"row\">\r\n");
       out.write("    <div class=\"col-lg-6\">\r\n");
       out.write("        <!-- body of the page-->\r\n");
-      out.write("        <form action=\"Admin/NewWord.do\" method=\"get\" class=\"form-horizontal\">\r\n");
+      out.write("        <form action=\"NewWord.do\" method=\"get\" class=\"form-horizontal\">\r\n");
       out.write("\r\n");
       out.write("            <!--word group box-->\r\n");
       out.write("            <div class=\"form-group\">\r\n");
@@ -137,7 +137,17 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <br/>\r\n");
       out.write("            <!--/meaning text box-->\r\n");
-      out.write("               \r\n");
+      out.write("            \r\n");
+      out.write("            <!--parts of speech text box-->\r\n");
+      out.write("            <div class=\"form-group\">\r\n");
+      out.write("                <label for=\"partsofspeech\" class=\"control-label col-sm-2\">Parts of Speech</label>\r\n");
+      out.write("                <div class=\"col-sm-10\">\r\n");
+      out.write("                    <textarea name=\"partsofspeech\" id=\"partsofspeech\"  class=\"form-control\" placeholder=\"Parts of Speech\"> </textarea>\r\n");
+      out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <br/>\r\n");
+      out.write("            <!--/parts of speech text box-->\r\n");
+      out.write("            \r\n");
       out.write("            <!--example text box-->\r\n");
       out.write("            <div class=\"form-group\">\r\n");
       out.write("                <label for=\"examples\" class=\"control-label col-sm-2\">Examples</label>\r\n");

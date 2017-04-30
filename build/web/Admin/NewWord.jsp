@@ -20,7 +20,7 @@
 <div class="row">
     <div class="col-lg-6">
         <!-- body of the page-->
-        <form action="Admin/NewWord.do" method="get" class="form-horizontal">
+        <form action="NewWord.do" method="get" class="form-horizontal">
 
             <!--word group box-->
             <div class="form-group">
@@ -79,7 +79,17 @@
             </div>
             <br/>
             <!--/meaning text box-->
-               
+            
+            <!--parts of speech text box-->
+            <div class="form-group">
+                <label for="partsofspeech" class="control-label col-sm-2">Parts of Speech</label>
+                <div class="col-sm-10">
+                    <textarea name="partsofspeech" id="partsofspeech"  class="form-control" placeholder="Parts of Speech"> </textarea>
+                </div>
+            </div>
+            <br/>
+            <!--/parts of speech text box-->
+            
             <!--example text box-->
             <div class="form-group">
                 <label for="examples" class="control-label col-sm-2">Examples</label>

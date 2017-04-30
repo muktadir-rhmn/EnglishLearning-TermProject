@@ -95,3 +95,7 @@ CREATE TABLE LEARNT
 	sOLVED_LAST_TIME NUMBER,
 	PRIMARY KEY (USER_ID, ENTITY_ID)
 );
+
+entity_nid_seq
+entity_level_id_seq
+word_example_id_seq

@@ -1,5 +1,8 @@
 package Admin;
 
+import Model.Entity;
+import Model.Word;
+import Model.wordExample;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -9,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name="NewWord", urlPatterns={"/Admin/NewWord"})
+@WebServlet(name="NewWord", urlPatterns={"/Admin/NewWord.do"})
 public class NewWord extends HttpServlet {
    
     
@@ -17,9 +20,22 @@ public class NewWord extends HttpServlet {
     throws ServletException, IOException{
         PrintWriter out = res.getWriter();
         HttpSession session = req.getSession();
-        
-        //String name = req.getParameter("name");
-        //Arnob: insert the word into the database
+        String group = req.getParameter("group");
+        Integer result = Integer.valueOf(group);
+        String word = req.getParameter("word");
+        String meaning = req.getParameter("meaning");
+        String example = req.getParameter("example");
+        String partsofSpeech = req.getParameter("partsofspeech");
+        System.out.println(group);
+        System.out.println(word);
+        System.out.println(meaning);
+        System.out.println(example);
+        System.out.println(partsofSpeech);
+        Entity obj = new Entity();
+        Word obj1 = new Word(word, meaning, partsofSpeech, result);
+        obj1.insertWord();
+        wordExample obj2 = new wordExample(example);
+        obj2.insertWordExample();
         
     } 
 
