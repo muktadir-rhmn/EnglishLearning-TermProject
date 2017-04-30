@@ -7,16 +7,39 @@ import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
 
+
 /**
  * Created by MUKTADIR on 4/26/2017.
  */
 public class JumbleSentence {
+
+    /*public static void main(String[] args) throws FileNotFoundException {
+        JumbleSentence js = new JumbleSentence();
+        LinkedList<Pair> list = js.getJumbledSentences(new File("D:\\input.txt"));
+        int i = 1;
+        for (Pair p : list){
+            System.out.println( i++ + " : "+p.s1 + " => " + p.s2);
+        }
+
+    }*/
 
 
     private Random rand = new Random();
     private Scanner sc;
     ArrayList<String >str = new ArrayList<>();
 
+
+    public LinkedList<Pair> getJumbledSentences(String sentences) throws FileNotFoundException {
+/*
+        LinkedList<Pair> list = new LinkedList<>();
+        while (true){
+            String sentence = getNextSentence();//problem
+            if(sentence.equals("")) break; //no more sentence
+            list.add(new Pair(sentence, jumbleSentence(sentence)));
+        }
+        return list;*/
+        return null;
+    }
 
     public LinkedList<Pair> getJumbledSentences(File file) throws FileNotFoundException {
         sc = new Scanner(file);
@@ -26,7 +49,6 @@ public class JumbleSentence {
             if(sentence.equals("")) break; //no more sentence
             list.add(new Pair(sentence, jumbleSentence(sentence)));
         }
-
         return list;
     }
 
