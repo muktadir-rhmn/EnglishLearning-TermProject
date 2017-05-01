@@ -4,8 +4,18 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewLesson.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewWordGroup.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/EntityLevel.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/Entity.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewWordLevel.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/WordGroup.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/Word.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Database/DataAccess.java</file>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/NewWord.jsp</file>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/EnterPractices.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewWord.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/wordExample.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/Lesson.java</file>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/NewLesson.jsp</file>
         </group>
     </open-files>

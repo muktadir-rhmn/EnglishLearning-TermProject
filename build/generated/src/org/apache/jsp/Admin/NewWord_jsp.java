@@ -84,7 +84,6 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
                         for(WordGroup t : levelList){
                             ArrayList<WordGroup> groups = db.getWordGroups(t.get_entity_id());
                             if(groups.isEmpty()) continue;
-                            
                         
       out.write("\r\n");
       out.write("                               <option>");
@@ -103,8 +102,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        ");
     
                         
-                            }
-                                                
+                            }                        
                         }
                         
       out.write("\r\n");
@@ -183,7 +181,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"modal-body\">\r\n");
       out.write("\r\n");
       out.write("                <!--Level from-->\r\n");
-      out.write("                <form action=\"Admin/NewWordGroup.do\" class=\"form-horizontal\">\r\n");
+      out.write("                <form action=\"NewWordGroup.do\" class=\"form-horizontal\">\r\n");
       out.write("                    <fieldset>\r\n");
       out.write("\r\n");
       out.write("                        <!--Word levels-->\r\n");

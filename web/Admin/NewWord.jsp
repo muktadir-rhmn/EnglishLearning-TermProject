@@ -37,7 +37,6 @@
                         for(WordGroup t : levelList){
                             ArrayList<WordGroup> groups = db.getWordGroups(t.get_entity_id());
                             if(groups.isEmpty()) continue;
-                            
                         %>
                                <option><%=t.get_entity_level_title()%></option> 
                         <%
@@ -46,8 +45,7 @@
                             <option value = "<%=g.get_word_group_id()%>">-----<%=g.get_word_group_title()%></option> 
                         <%    
                         
-                            }
-                                                
+                            }                        
                         }
                         %>
                     </select>
@@ -125,7 +123,7 @@
             <div class="modal-body">
 
                 <!--Level from-->
-                <form action="Admin/NewWordGroup.do" class="form-horizontal">
+                <form action="NewWordGroup.do" class="form-horizontal">
                     <fieldset>
 
                         <!--Word levels-->

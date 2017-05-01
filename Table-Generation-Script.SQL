@@ -99,3 +99,4 @@ CREATE TABLE LEARNT
 entity_nid_seq
 entity_level_id_seq
 word_example_id_seq
+word_group_id_seq

@@ -156,6 +156,17 @@ public class DataAccess {
         }
     }
     
+    public void insertWordGroup(String title, int levelID){
+        try{
+            String insertCommand = "insert into WORD_GROUP values(word_group_id_seq.NEXTVAL,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setString(1, title);
+            stmt.setInt(2, levelID);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
     
     public int getEnityId(){
         try{
