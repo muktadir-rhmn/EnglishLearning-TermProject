@@ -58,13 +58,19 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("New Word", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newWordSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()), out, false);
       out.write('\r');
       out.write('\n');
+      out.write('\r');
+      out.write('\n');
+
+    String msg = (String) session.getAttribute("msg");
+    if(msg != null){
+        out.print(
+                "<div class='alert alert-success'>" + msg +"</div>"
+        );
+        session.removeAttribute("msg");
+    }
+
       out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("<div class=\"row\">\r\n");
-      out.write("    <div class=\"col-lg-6\">\r\n");
-      out.write("        <!-- body of the page-->\r\n");
-      out.write("        <form action=\"Admin/NewWord.do\" method=\"get\" class=\"form-horizontal\">\r\n");
+      out.write("       <form action=\"NewWord.do\" method=\"get\" class=\"form-horizontal\">\r\n");
       out.write("\r\n");
       out.write("            <!--word group box-->\r\n");
       out.write("            <div class=\"form-group\">\r\n");
@@ -84,12 +90,11 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
                         for(WordGroup t : levelList){
                             ArrayList<WordGroup> groups = db.getWordGroups(t.get_entity_id());
                             if(groups.isEmpty()) continue;
-                            
                         
       out.write("\r\n");
-      out.write("                               <option>");
+      out.write("                               <option disabled>");
       out.print(t.get_entity_level_title());
-      out.write("</option> \r\n");
+      out.write("</option>\r\n");
       out.write("                        ");
 
                             for(WordGroup g: groups){
@@ -103,8 +108,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        ");
     
                         
-                            }
-                                                
+                            }                        
                         }
                         
       out.write("\r\n");
@@ -137,7 +141,17 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <br/>\r\n");
       out.write("            <!--/meaning text box-->\r\n");
-      out.write("               \r\n");
+      out.write("            \r\n");
+      out.write("            <!--parts of speech text box-->\r\n");
+      out.write("            <div class=\"form-group\">\r\n");
+      out.write("                <label for=\"partsofspeech\" class=\"control-label col-sm-2\">Parts of Speech</label>\r\n");
+      out.write("                <div class=\"col-sm-10\">\r\n");
+      out.write("                    <textarea name=\"partsofspeech\" id=\"partsofspeech\"  class=\"form-control\" placeholder=\"Parts of Speech\"> </textarea>\r\n");
+      out.write("                </div>\r\n");
+      out.write("            </div>\r\n");
+      out.write("            <br/>\r\n");
+      out.write("            <!--/parts of speech text box-->\r\n");
+      out.write("            \r\n");
       out.write("            <!--example text box-->\r\n");
       out.write("            <div class=\"form-group\">\r\n");
       out.write("                <label for=\"examples\" class=\"control-label col-sm-2\">Examples</label>\r\n");
@@ -173,7 +187,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"modal-body\">\r\n");
       out.write("\r\n");
       out.write("                <!--Level from-->\r\n");
-      out.write("                <form action=\"Admin/NewWordGroup.do\" class=\"form-horizontal\">\r\n");
+      out.write("                <form action=\"NewWordGroup.do\" class=\"form-horizontal\">\r\n");
       out.write("                    <fieldset>\r\n");
       out.write("\r\n");
       out.write("                        <!--Word levels-->\r\n");
@@ -247,21 +261,29 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"modal-content\">\r\n");
       out.write("            <div class=\"modal-header\">\r\n");
       out.write("                <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n");
-      out.write("                <h4 class=\"modal-title\">New Group</h4>\r\n");
+      out.write("                <h4 class=\"modal-title\">New Level</h4>\r\n");
       out.write("            </div>\r\n");
       out.write("            <div class=\"modal-body\">\r\n");
       out.write("\r\n");
       out.write("                <!--Level from-->\r\n");
-      out.write("                <form action=\"Admin/NewWordLevel.do\" class=\"form-horizontal\">\r\n");
+      out.write("                <form action=\"NewLevel.do\" class=\"form-horizontal\">\r\n");
       out.write("                    <fieldset>\r\n");
+      out.write("                        <input type=\"hidden\" name=\"levelType\" value=\"0\"/>\r\n");
       out.write("                        <!-- Text input-->\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
-      out.write("                            <label class=\"col-md-4 control-label\" for=\"wordlevel1\">Title</label>\r\n");
-      out.write("                            <div class=\"col-md-6\">\r\n");
-      out.write("                                <input id=\"wordlevel1\" name=\"level\" type=\"text\" placeholder=\"Word Level\" class=\"form-control input-md\" required=\"\">\r\n");
+      out.write("                            <label class=\"col-md-4 control-label\" for=\"levelTitle\">Title</label>\r\n");
+      out.write("                            <div class=\"col-md-4\">\r\n");
+      out.write("                                <input id=\"levelTitle\" name=\"levelTitle\" type=\"text\" placeholder=\"title\" class=\"form-control input-md\" required=\"\">\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
-      out.write("                        <!-- /Text input-->\r\n");
+      out.write("\r\n");
+      out.write("                        <!-- Text input-->\r\n");
+      out.write("                        <div class=\"form-group\">\r\n");
+      out.write("                            <label class=\"col-md-4 control-label\" for=\"levelNo\">Level No</label>\r\n");
+      out.write("                            <div class=\"col-md-4\">\r\n");
+      out.write("                                <input id=\"levelNo\" name=\"levelNo\" type=\"text\" placeholder=\"Level No\" class=\"form-control input-md\" required=\"\">\r\n");
+      out.write("                            </div>\r\n");
+      out.write("                        </div>\r\n");
       out.write("                        <!-- Button -->\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
       out.write("                            <label class=\"col-md-4 control-label\" for=></label>\r\n");

@@ -40,6 +40,8 @@ public class NewLesson extends HttpServlet {
            Lesson obj2 = new Lesson(title, body, 2, 1);
            obj2.insertLesson();
         }
+        session.setAttribute("msg", " successfully added new lesson.");
+        res.sendRedirect("NewLesson.jsp");
     } 
 
   

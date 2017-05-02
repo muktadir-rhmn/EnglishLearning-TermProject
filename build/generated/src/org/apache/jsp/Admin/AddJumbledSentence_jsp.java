@@ -43,8 +43,19 @@ public final class AddJumbledSentence_jsp extends org.apache.jasper.runtime.Http
 
       out.write('\n');
       out.write('\n');
-      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("New Lesson", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newLessonSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()), out, false);
+      org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("Add Jumbled Sentence", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newLessonSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()), out, false);
       out.write('\n');
+      out.write('\n');
+      out.write('\n');
+
+    String msg = (String) session.getAttribute("msg");
+    if(msg != null){
+        out.print(
+                "<div class='alert alert-success'>" + msg +"</div>"
+        );
+        session.removeAttribute("msg");
+    }
+
       out.write("\n");
       out.write("<form action=\"AddJumbledSentence.do\" method=\"post\" class=\"form-horizontal\">\n");
       out.write("    <!--sentences text box-->\n");

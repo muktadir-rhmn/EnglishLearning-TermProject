@@ -1,5 +1,8 @@
 package Admin;
 
+import Model.Entity;
+import Model.Word;
+import Model.wordExample;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,10 +20,28 @@ public class NewWord extends HttpServlet {
     throws ServletException, IOException{
         PrintWriter out = res.getWriter();
         HttpSession session = req.getSession();
+        String group = req.getParameter("group");
+        Integer result = Integer.valueOf(group);
+        String word = req.getParameter("word");
+        String meaning = req.getParameter("meaning");
+        String example = req.getParameter("example");
+        String partsofSpeech = req.getParameter("partsofspeech");
+        System.out.println(group);
+        System.out.println(word);
+        System.out.println(meaning);
+        System.out.println(example);
+        System.out.println(partsofSpeech);
+        Entity obj = new Entity();
+        Word obj1 = new Word(word, meaning, partsofSpeech, result);
+        obj1.insertWord();
+        String[] examples = example.split("\n");
+        for(String e: examples) {
+            wordExample obj2 = new wordExample(e);
+            obj2.insertWordExample();
+        }
         
-        //String name = req.getParameter("name");
-        //Arnob: insert the word into the database
-        
+        session.setAttribute("msg", " successfully added new word.");
+        res.sendRedirect("NewWord.jsp");
     } 
 
   

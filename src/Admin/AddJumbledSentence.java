@@ -30,7 +30,8 @@ public class AddJumbledSentence extends HttpServlet {
             System.out.println(s.sentence);
             MdlJumbledSentence.insert(s.sentence, s.correctOrder);
         }
-        
+        session.setAttribute("msg", " successfully added the jumbled word.");
+        res.sendRedirect("AddJumbledSentence.jsp");
     } 
 
   

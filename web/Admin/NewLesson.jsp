@@ -6,9 +6,21 @@
     <jsp:param name="sectionVocabulary" value="collapse" />
 </jsp:include>
 <%-- ******************************************************** --%>
+<%
+    String msg = (String) session.getAttribute("msg");
+    if(msg != null){
+        out.print(
+                "<div class='alert alert-success'>" + msg +"</div>"
+        );
+        session.removeAttribute("msg");
+    }
+%>
 
+<script>
 
-<form action="NewLesson.do" method="get" class="form-horizontal">
+</script>
+
+<form id="lessonForm" action="NewLesson.do" method="get" class="form-horizontal">
     <!--level selection-->
     <div class="form-group">
         <div class="col-sm-1">
@@ -38,7 +50,7 @@
     <!--/level selection-->
 
 
-    <input type="hidden" name="body" value="fjasdlfk"/>
+    <input type="hidden" id="LessonBody" name="body" value="fjasdlfk"/>
     <!--Title text box-->
     <div class="form-group">
         <label for="title" class="control-label col-sm-1">Title</label>
@@ -57,7 +69,7 @@
     </div>
     <!--/Text Editor-->
     <br>
-    <input type="submit" value="Post" class="btn btn-primary btn-lg">
+    <input type="button" onclick="sendLesson();" value="Post" class="btn btn-primary btn-lg">
 </form>
 
 
@@ -73,13 +85,23 @@
             </div>
             <div class="modal-body">
                 <!--Level from-->
-                <form action="" class="form-horizontal">
+                <form action="NewLevel.do" class="form-horizontal">
                     <fieldset>
+                        <input type="hidden" id="levelType" name="levelType" value="1"/>
+
                         <!-- Text input-->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="levelTitle">Title</label>
                             <div class="col-md-4">
                                 <input id="levelTitle" name="levelTitle" type="text" placeholder="title" class="form-control input-md" required="">
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="levelNo">Level No</label>
+                            <div class="col-md-4">
+                                <input id="levelNo" name="levelNo" type="text" placeholder="Level No" class="form-control input-md" required="">
                             </div>
                         </div>
                         <!-- Button -->

@@ -160,9 +160,10 @@ public final class JumbledSentence_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <nav class=\"navbar navbar-default navbar-static-top\">\r\n");
       out.write("            <div class=\"container\">\r\n");
       out.write("                <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                    <li class=\"active\"><a href=\"#\">Home</a></li>\r\n");
-      out.write("                    <li><a href=\"#about\">About</a></li>\r\n");
-      out.write("                    <li><a href=\"#contact\">Contact</a></li>\r\n");
+      out.write("                    <li ><a href=\"#\">Home</a></li>\r\n");
+      out.write("                    <li ><a href=\"#about\">Vocabulary</a></li>\r\n");
+      out.write("                    <li ><a href=\"#contact\">Grammar</a></li>\r\n");
+      out.write("                    <li class=\"active\"><a href=\"JumbledSentence.jsp\">Practice</a></li>\r\n");
       out.write("\r\n");
       out.write("                </ul>\r\n");
       out.write("            </div>\r\n");

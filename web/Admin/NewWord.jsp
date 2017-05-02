@@ -15,12 +15,16 @@
     <jsp:param name="newWordSideBar" value="active" />
 </jsp:include>
 <%-- ******************************************************** --%>
-
-
-<div class="row">
-    <div class="col-lg-6">
-        <!-- body of the page-->
-        <form action="Admin/NewWord.do" method="get" class="form-horizontal">
+<%
+    String msg = (String) session.getAttribute("msg");
+    if(msg != null){
+        out.print(
+                "<div class='alert alert-success'>" + msg +"</div>"
+        );
+        session.removeAttribute("msg");
+    }
+%>
+       <form action="NewWord.do" method="get" class="form-horizontal">
 
             <!--word group box-->
             <div class="form-group">
@@ -37,17 +41,15 @@
                         for(WordGroup t : levelList){
                             ArrayList<WordGroup> groups = db.getWordGroups(t.get_entity_id());
                             if(groups.isEmpty()) continue;
-                            
                         %>
-                               <option><%=t.get_entity_level_title()%></option> 
+                               <option disabled><%=t.get_entity_level_title()%></option>
                         <%
                             for(WordGroup g: groups){
                         %>
                             <option value = "<%=g.get_word_group_id()%>">-----<%=g.get_word_group_title()%></option> 
                         <%    
                         
-                            }
-                                                
+                            }                        
                         }
                         %>
                     </select>
@@ -74,12 +76,22 @@
             <div class="form-group">
                 <label for="meaning" class="control-label col-sm-2">Meaning</label>
                 <div class="col-sm-10">
-                    <textarea name="meaning" id="meaning"  class="form-control" placeholder="Meaning of the word"> </textarea>
+                    <textarea name="meaning" id="meaning"  class="form-control" placeholder="Meaning of the word"></textarea>
                 </div>
             </div>
             <br/>
             <!--/meaning text box-->
-               
+            
+            <!--parts of speech text box-->
+            <div class="form-group">
+                <label for="partsofspeech" class="control-label col-sm-2">Parts of Speech</label>
+                <div class="col-sm-10">
+                    <textarea name="partsofspeech" id="partsofspeech"  class="form-control" placeholder="Parts of Speech"></textarea>
+                </div>
+            </div>
+            <br/>
+            <!--/parts of speech text box-->
+            
             <!--example text box-->
             <div class="form-group">
                 <label for="examples" class="control-label col-sm-2">Examples</label>
@@ -115,7 +127,7 @@
             <div class="modal-body">
 
                 <!--Level from-->
-                <form action="Admin/NewWordGroup.do" class="form-horizontal">
+                <form action="NewWordGroup.do" class="form-horizontal">
                     <fieldset>
 
                         <!--Word levels-->
@@ -180,21 +192,29 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">New Group</h4>
+                <h4 class="modal-title">New Level</h4>
             </div>
             <div class="modal-body">
 
                 <!--Level from-->
-                <form action="Admin/NewWordLevel.do" class="form-horizontal">
+                <form action="NewLevel.do" class="form-horizontal">
                     <fieldset>
+                        <input type="hidden" name="levelType" value="0"/>
                         <!-- Text input-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="wordlevel1">Title</label>
-                            <div class="col-md-6">
-                                <input id="wordlevel1" name="level" type="text" placeholder="Word Level" class="form-control input-md" required="">
+                            <label class="col-md-4 control-label" for="levelTitle">Title</label>
+                            <div class="col-md-4">
+                                <input id="levelTitle" name="levelTitle" type="text" placeholder="title" class="form-control input-md" required="">
                             </div>
                         </div>
-                        <!-- /Text input-->
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="levelNo">Level No</label>
+                            <div class="col-md-4">
+                                <input id="levelNo" name="levelNo" type="text" placeholder="Level No" class="form-control input-md" required="">
+                            </div>
+                        </div>
                         <!-- Button -->
                         <div class="form-group">
                             <label class="col-md-4 control-label" for=></label>

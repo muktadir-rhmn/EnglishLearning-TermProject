@@ -107,9 +107,10 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li ><a href="#">Home</a></li>
+                    <li ><a href="#about">Vocabulary</a></li>
+                    <li ><a href="#contact">Grammar</a></li>
+                    <li class="active"><a href="JumbledSentence.jsp">Practice</a></li>
 
                 </ul>
             </div>

@@ -51,8 +51,17 @@
           $("#test").html(data);
       }
 
-        );
+      );
+      
+      
     });
+    
+    function sendLesson() {
+        var body = $('#edit').froalaEditor("html.get");
+        $("#LessonBody").attr("value", body);
+        alert($("#LessonBody").val());
+        $("#lessonForm").submit();
+    }
   </script>
 </body>
 

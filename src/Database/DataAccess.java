@@ -93,7 +93,7 @@ public class DataAccess {
     }    
     public void insertEntity(){
         try{
-            String insertCommand = "INSERT INTO entity VALUES (entity_ID_SEQ.NEXTVAL)";
+            String insertCommand = "INSERT INTO entity(ENTITY_ID) VALUES (entity_ID_SEQ.NEXTVAL)";
             PreparedStatement stmt = cnn.prepareStatement(insertCommand);
             System.out.println("Entermofo");
             stmt.execute();
@@ -118,7 +118,7 @@ public class DataAccess {
     
     public void insertEntityLevel(int levelNo, String levelTitle, int entityType){
         try{
-            String insertCommand = "INSERT INTO entity_level VALUES (entity_level_id_SEQ.NEXTVAL, ?, ?, ?)";
+            String insertCommand = "INSERT INTO entity_level (ENTITY_LEVEL_ID, LEVEL_NO, LEVEL_TITLE, ENTITY_TYPE) VALUES (entity_level_id_SEQ.NEXTVAL, ?, ?, ?)";
             PreparedStatement stmt = cnn.prepareStatement(insertCommand);
             stmt.setInt(1, levelNo);
             stmt.setString(2, levelTitle);
@@ -129,9 +129,62 @@ public class DataAccess {
         }
     }
     
+    public void insertWord(int entityID, String word, String meaning, String partsofSpeech, int wordGroupID){
+        try{
+            String insertCommand = "insert into word (ENTITY_ID, WORD, MEANING, PARTS_OF_SPEECH, WORD_GROUP_ID) values(?,?,?,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, entityID);
+            stmt.setString(2, word);
+            stmt.setString(3, meaning);
+            stmt.setString(4, partsofSpeech);
+            stmt.setInt(5, wordGroupID);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void insertWordExample(int entityID, String sentence){
+        try{
+            String insertCommand = "insert into WORD_EXAMPLE(WORD_EXAMPLE_ID, ENTITY_ID, SENTENCE) values(word_example_id_seq.NEXTVAL,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, entityID);
+            stmt.setString(2, sentence);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void insertWordGroup(String title, int levelID){
+        try{
+            String insertCommand = "insert into WORD_GROUP (WORD_GROUP_ID, TITLE, LEVEL_ID) values(word_group_id_seq.NEXTVAL,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setString(1, title);
+            stmt.setInt(2, levelID);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     public int getEnityId(){
         try{
             String insertCommand = "SELECT entity_ID_SEQ.CURRVAL FROM DUAL"; 
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public int getEnityLevelIdByMuktadir(){
+        try{
+            String insertCommand = "SELECT entity_level_id_seq.nextval FROM DUAL";
             PreparedStatement stmt = cnn.prepareStatement(insertCommand);
             ResultSet rs = stmt.executeQuery();
             if(rs.next()){
@@ -158,6 +211,7 @@ public class DataAccess {
         }
         return 0;
     }
+    
     
     public PreparedStatement getStatement(String sql) throws SQLException{
         return cnn.prepareStatement(sql);

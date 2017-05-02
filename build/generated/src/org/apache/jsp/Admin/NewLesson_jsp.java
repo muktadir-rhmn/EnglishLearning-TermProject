@@ -48,6 +48,17 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("New Lesson", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newLessonSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("sectionVocabulary", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("collapse", request.getCharacterEncoding()), out, false);
       out.write('\r');
       out.write('\n');
+      out.write('\r');
+      out.write('\n');
+
+    String msg = (String) session.getAttribute("msg");
+    if(msg != null){
+        out.print(
+                "<div class='alert alert-success'>" + msg +"</div>"
+        );
+        session.removeAttribute("msg");
+    }
+
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -124,8 +135,9 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <div class=\"modal-body\">\r\n");
       out.write("                <!--Level from-->\r\n");
-      out.write("                <form class=\"form-horizontal\">\r\n");
+      out.write("                <form action=\"NewLevel.do\" class=\"form-horizontal\">\r\n");
       out.write("                    <fieldset>\r\n");
+      out.write("                        <input type=\"hidden\" name=\"levelType\" value=\"1\"/>\r\n");
       out.write("                        <!-- Text input-->\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
       out.write("                            <label class=\"col-md-4 control-label\" for=\"levelTitle\">Title</label>\r\n");
@@ -133,11 +145,19 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                <input id=\"levelTitle\" name=\"levelTitle\" type=\"text\" placeholder=\"title\" class=\"form-control input-md\" required=\"\">\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
+      out.write("\r\n");
+      out.write("                        <!-- Text input-->\r\n");
+      out.write("                        <div class=\"form-group\">\r\n");
+      out.write("                            <label class=\"col-md-4 control-label\" for=\"levelNo\">Level No</label>\r\n");
+      out.write("                            <div class=\"col-md-4\">\r\n");
+      out.write("                                <input id=\"levelNo\" name=\"levelNo\" type=\"text\" placeholder=\"Level No\" class=\"form-control input-md\" required=\"\">\r\n");
+      out.write("                            </div>\r\n");
+      out.write("                        </div>\r\n");
       out.write("                        <!-- Button -->\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
       out.write("                            <label class=\"col-md-4 control-label\" for=\"btnNewLevel\"></label>\r\n");
       out.write("                            <div class=\"col-md-4\">\r\n");
-      out.write("                                <button id=\"btnNewLevel\" name=\"btnNewLevel\" class=\"btn btn-primary\">Create</button>\r\n");
+      out.write("                                <button id=\"btnNewLevel\" class=\"btn btn-primary\">Create</button>\r\n");
       out.write("                            </div>\r\n");
       out.write("                        </div>\r\n");
       out.write("                    </fieldset>\r\n");

@@ -5,10 +5,20 @@
 --%>
 
 <jsp:include page="../Resources/header/admin_header.jsp">
-    <jsp:param name="title" value="New Lesson" />
+    <jsp:param name="title" value="Add Jumbled Sentence" />
     <jsp:param name="newLessonSideBar" value="active" />
 </jsp:include>
 <%-- ******************************************************** --%>
+
+<%
+    String msg = (String) session.getAttribute("msg");
+    if(msg != null){
+        out.print(
+                "<div class='alert alert-success'>" + msg +"</div>"
+        );
+        session.removeAttribute("msg");
+    }
+%>
 <form action="AddJumbledSentence.do" method="post" class="form-horizontal">
     <!--sentences text box-->
     <div class="form-group">

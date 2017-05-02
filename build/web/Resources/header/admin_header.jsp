@@ -174,7 +174,7 @@
                                 <a href="NewLesson.jsp" ><span class="glyphicon glyphicon-pencil"> </span></i> New Lesson</a>
                             </li>
                             <li>
-                                <a href=""><span class="glyphicon glyphicon-th-list"> </span></i> View Lessons</a>
+                                <!--<a href=""><span class="glyphicon glyphicon-th-list"> </span></i> View Lessons</a>-->
                             </li>
                         </ul>
                     </li>
@@ -185,14 +185,26 @@
                                 <a href="NewWord.jsp"><span class="glyphicon glyphicon-pencil"> </span></i> New Word</a>
                             </li>
                             <li>
-                                <a href=""><span class="glyphicon glyphicon-th-list"> </span></i> Search Word</a>
+                              <!--  <a href=""><span class="glyphicon glyphicon-th-list"> </span></i> Search Word</a>-->
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="${param.newPracticeSideBar}">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#sectionLesson"><span class="glyphicon glyphicon-book"></span> Practice <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="sectionPractice">
+                            <li >
+                                <a href="AddJumbledSentence.jsp" ><span class="glyphicon glyphicon-pencil"> </span></i> New Jumble Sentence</a>
+                            </li>
+                            <li>
+                                <!--<a href=""><span class="glyphicon glyphicon-th-list"> </span></i> View Lessons</a>-->
                             </li>
                         </ul>
                     </li>
 
-                    <li class="">
+<!--                    <li class="">
                         <a href=""><span class="glyphicon glyphicon-pencil"> </span></i> Dummy</a>
                     </li>
+                    -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

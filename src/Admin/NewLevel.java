@@ -1,5 +1,7 @@
 package Admin;
 
+import Model.EntityLevel;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,7 +21,16 @@ public class NewLevel extends HttpServlet {
         HttpSession session = req.getSession();
         
         //String name = req.getParameter("name");
+        String levelTitle = req.getParameter("levelTitle");
+        String levelNo = req.getParameter("levelNo");
+        Integer result = Integer.valueOf(levelNo);
+        String levelType = req.getParameter("levelType");
+        Integer result1 = Integer.valueOf(levelType);
+        EntityLevel obj = new EntityLevel();
+        obj.insertLevel(result1, result, levelTitle);
         
+        session.setAttribute("msg", " successfully added the new level.");
+        res.sendRedirect("NewLesson.jsp");
     } 
 
   
