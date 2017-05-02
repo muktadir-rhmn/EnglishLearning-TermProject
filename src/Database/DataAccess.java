@@ -5,7 +5,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class DataAccess {
-    private String dbURL = "jdbc:oracle:thin:@localhost:1521:orcl";
+    private String dbURL = "jdbc:oracle:thin:@localhost:1521:xe";
     private String userName = "project";
     private String password = "123";
     private Connection cnn = null; //private bcoz if we make it public, we may mistakenly disconnect this connection
@@ -91,6 +91,73 @@ public class DataAccess {
         System.out.println("A");
         return temp;
     }    
+    public void insertEntity(){
+        try{
+            String insertCommand = "INSERT INTO entity VALUES (entity_ID_SEQ.NEXTVAL)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            System.out.println("Entermofo");
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void insertLesson(int entityID, String title, String content, int levelID){
+        try{
+            String insertCommand = "insert into lesson (entity_id, title, content, level_id) values(?,?,?,?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, entityID);
+            stmt.setString(2, title);
+            stmt.setString(3, content);
+            stmt.setInt(4, levelID);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void insertEntityLevel(int levelNo, String levelTitle, int entityType){
+        try{
+            String insertCommand = "INSERT INTO entity_level VALUES (entity_level_id_SEQ.NEXTVAL, ?, ?, ?)";
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, levelNo);
+            stmt.setString(2, levelTitle);
+            stmt.setInt(3, entityType);
+            stmt.execute();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public int getEnityId(){
+        try{
+            String insertCommand = "SELECT entity_ID_SEQ.CURRVAL FROM DUAL"; 
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt(1);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
+    
+    public int getEnityLevelId(int level_no, int entity_type){
+        try{
+            String insertCommand = "SELECT entity_level_ID FROM entity_level where level_no = ? and entity_type = ?"; 
+            PreparedStatement stmt = cnn.prepareStatement(insertCommand);
+            stmt.setInt(1, level_no);
+            stmt.setInt(2, entity_type);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("entity_level_id");
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return 0;
+    }
     
     public PreparedStatement getStatement(String sql) throws SQLException{
         return cnn.prepareStatement(sql);

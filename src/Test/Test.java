@@ -1,9 +1,5 @@
 package Test;
 
-import Database.DataAccess;
-import Practice.JumbleSentence;
-import Practice.Pair;
-
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -16,11 +12,6 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) throws FileNotFoundException {
-       JumbleSentence js = new JumbleSentence();
-       LinkedList<Pair> list = js.getJumbledSentences(new File("C:\\Users\\MUKTADIR\\Documents\\NetBeansProjects\\html parsing\\test.txt"));
-       for (Pair p : list){
-           System.out.println(p.s1 + " => " + p.s2);
-       }
 
     }
 

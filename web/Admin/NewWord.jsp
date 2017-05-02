@@ -79,12 +79,12 @@
             </div>
             <br/>
             <!--/meaning text box-->
-
+               
             <!--example text box-->
             <div class="form-group">
                 <label for="examples" class="control-label col-sm-2">Examples</label>
                 <div class="col-sm-10">
-                    <textarea name="meaning" id="examples" class="form-control" placeholder="Write an example per line"></textarea>
+                    <textarea name="example" id="examples" class="form-control" placeholder="Write an example per line"></textarea>
                 </div>
             </div>
             <br/>

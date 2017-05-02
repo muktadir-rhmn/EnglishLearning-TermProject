@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name="NewWordLevel", urlPatterns={"/Admin/NewWordLevel"})
-public class NewWordLevel extends HttpServlet {
+@WebServlet(name="NewLevel", urlPatterns={"/Admin/NewLevel.do"})
+public class NewLevel extends HttpServlet {
    
     
     protected void processRequest(HttpServletRequest req, HttpServletResponse res)

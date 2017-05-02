@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name="NewWord", urlPatterns={"/Admin/NewWord"})
+@WebServlet(name="NewWord", urlPatterns={"/Admin/NewWord.do"})
 public class NewWord extends HttpServlet {
    
     
@@ -20,6 +20,7 @@ public class NewWord extends HttpServlet {
         
         //String name = req.getParameter("name");
         //Arnob: insert the word into the database
+        
     } 
 
   

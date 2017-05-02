@@ -111,7 +111,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </select>\r\n");
       out.write("\r\n");
       out.write("                </div>\r\n");
-      out.write("s                <div class=\"col-sm-2\">\r\n");
+      out.write("                <div class=\"col-sm-2\">\r\n");
       out.write("                    <!-- Trigger the modal with a button -->\r\n");
       out.write("                    <button type=\"button\" class=\"btn btn-default\" data-toggle=\"modal\" data-target=\"#myModal\"><span class=\"glyphicon glyphicon-plus\"></span></button>\r\n");
       out.write("                </div>\r\n");
@@ -137,12 +137,12 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            </div>\r\n");
       out.write("            <br/>\r\n");
       out.write("            <!--/meaning text box-->\r\n");
-      out.write("\r\n");
+      out.write("               \r\n");
       out.write("            <!--example text box-->\r\n");
       out.write("            <div class=\"form-group\">\r\n");
       out.write("                <label for=\"examples\" class=\"control-label col-sm-2\">Examples</label>\r\n");
       out.write("                <div class=\"col-sm-10\">\r\n");
-      out.write("                    <textarea name=\"meaning\" id=\"examples\" class=\"form-control\" placeholder=\"Write an example per line\"></textarea>\r\n");
+      out.write("                    <textarea name=\"example\" id=\"examples\" class=\"form-control\" placeholder=\"Write an example per line\"></textarea>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("            <br/>\r\n");
