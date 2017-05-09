@@ -136,7 +136,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"form-group\">\r\n");
       out.write("                <label for=\"meaning\" class=\"control-label col-sm-2\">Meaning</label>\r\n");
       out.write("                <div class=\"col-sm-10\">\r\n");
-      out.write("                    <textarea name=\"meaning\" id=\"meaning\"  class=\"form-control\" placeholder=\"Meaning of the word\"> </textarea>\r\n");
+      out.write("                    <textarea name=\"meaning\" id=\"meaning\"  class=\"form-control\" placeholder=\"Meaning of the word\"></textarea>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("            <br/>\r\n");
@@ -146,7 +146,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <div class=\"form-group\">\r\n");
       out.write("                <label for=\"partsofspeech\" class=\"control-label col-sm-2\">Parts of Speech</label>\r\n");
       out.write("                <div class=\"col-sm-10\">\r\n");
-      out.write("                    <textarea name=\"partsofspeech\" id=\"partsofspeech\"  class=\"form-control\" placeholder=\"Parts of Speech\"> </textarea>\r\n");
+      out.write("                    <textarea name=\"partsofspeech\" id=\"partsofspeech\"  class=\"form-control\" placeholder=\"Parts of Speech\"></textarea>\r\n");
       out.write("                </div>\r\n");
       out.write("            </div>\r\n");
       out.write("            <br/>\r\n");

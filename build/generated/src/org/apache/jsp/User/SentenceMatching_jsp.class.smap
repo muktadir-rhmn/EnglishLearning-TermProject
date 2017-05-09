@@ -1,0 +1,15 @@
+SMAP
+SentenceMatching_jsp.java
+JSP
+*S JSP
+*F
++ 0 SentenceMatching.jsp
+User/SentenceMatching.jsp
+*L
+1,35:47
+35,26:82
+61,2:108,3
+63:114
+64:115,3
+65,235:118
+*E

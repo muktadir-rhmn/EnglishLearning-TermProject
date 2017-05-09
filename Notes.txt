@@ -1,0 +1,8 @@
+~~~~~~~~~~~~~~ Reserved Entity id ~~~~~~~~~~~
+0 for sentence matching.
+option 1 => first part of the sentence
+option 2 => second part of the sentence
+
+1 for preposition : filling the blanks
+
+2 for article practice: FILLING THE BLANKS

@@ -14,45 +14,28 @@ import java.util.Scanner;
 public class SentenceJumbler {
     public static void main(String[] args) {
         SentenceJumbler s = new SentenceJumbler();
-        String str =  "I am muktadir. I am very smart. Everybody likes me.   I am a    lovely person.";
-        s.getJumbledSentences(str);
+        String str =  "";
+        //s.getJumbledSentences(str);
     }
 
 
     private static Random rand = new Random();
 
-    public static LinkedList<JumbledSentence> getJumbledSentences(String para){
+    public static LinkedList<JumbledSentence> getJumbledSentences(ArrayList<String> sentences){
 
         LinkedList<JumbledSentence> list = new LinkedList<>();
-        String[] sentences = para.split("[.]");
         for (String sentence: sentences){
-            sentence= sentence.trim().replaceAll(" +", " ");
-            if(isSimple(sentence)){
-                JumbledSentence t = jumbleSentence(sentence);
-                System.out.println(t.sentence);
-                for (int i = 0; i < t.correctOrder.length; i++) {
-                    System.out.print(t.correctOrder[i] + " ");
-                }
-                System.out.println();
-                
-               list.add(t);
+            JumbledSentence t = jumbleSentence(sentence);
+            System.out.println(t.sentence);
+            for (int i = 0; i < t.correctOrder.length; i++) {
+                System.out.print(t.correctOrder[i] + " ");
             }
+            System.out.println();
+
+           list.add(t);
+
         }
         return list;
-    }
-
-    private static boolean isSimple(String sentence){
-        int len = sentence.length();
-
-        if(len < 1 || len > 40) return false; //too much lengthy
-
-        for (int i = 0; i < sentence.length(); i++) {
-            char ch = sentence.charAt(i);
-            if(!(ch == ' ' ||(ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))){ //some punctuation mark
-                return false;
-            }
-        }
-        return true;
     }
 
 
