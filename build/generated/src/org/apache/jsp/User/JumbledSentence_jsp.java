@@ -189,7 +189,7 @@ public final class JumbledSentence_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <button onclick=\"showResult();\" class=\"btn btn-danger\">Show Result</button>\r\n");
       out.write("    </div>\r\n");
       out.write("\r\n");
-      out.write("\r\n");
+      out.write("</div>\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");
     } catch (Throwable t) {
