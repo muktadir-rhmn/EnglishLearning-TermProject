@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56b89044-9cc0-486a-9b35-81e933af2551" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/Practice.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Practice/PracticeGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Practice/SentenceManager.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewWordLevel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Model/JumbledSentence.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/classes/org/apache/jsp/Admin/NewWord_jsp.class" afterPath="$PROJECT_DIR$/build/generated/classes/org/apache/jsp/Admin/NewWord_jsp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Admin/AddJumbledSentence.class" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Admin/AddJumbledSentence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/WEB-INF/classes/Practice/SentenceJumbler.class" afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/Practice/SentenceJumbler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/AddJumbledSentence.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/AddJumbledSentence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewLesson.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewLesson.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewWord.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewWord.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewWordGroup.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Admin/NewWordGroup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Database/DataAccess.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Database/DataAccess.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Model/EntityLevel.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Model/EntityLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Model/WordGroup.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Model/WordGroup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Practice/JumbledSentence.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Practice/JumbledSentence.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/EnglishLearning/Practice/SentenceJumbler.class" afterPath="$PROJECT_DIR$/out/production/EnglishLearning/Practice/SentenceJumbler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DB/Sequences.txt" afterPath="$PROJECT_DIR$/DB/Sequences.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/NewWord_jsp.java" afterPath="$PROJECT_DIR$/build/generated/src/org/apache/jsp/Admin/NewWord_jsp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/web/User/JumbledSentence.jsp" afterPath="$PROJECT_DIR$/build/web/User/JumbledSentence.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin/AddJumbledSentence.java" afterPath="$PROJECT_DIR$/src/Admin/AddJumbledSentence.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Practice/SentenceJumbler.java" afterPath="$PROJECT_DIR$/src/Practice/SentenceJumbler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/User/JumbledSentence.jsp" afterPath="$PROJECT_DIR$/web/User/JumbledSentence.jsp" />
-    </list>
+    <list default="true" id="56b89044-9cc0-486a-9b35-81e933af2551" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,11 +22,9 @@
       <file leaf-file-name="SentenceJumbler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice/SentenceJumbler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="34">
               <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,8 +42,8 @@
       <file leaf-file-name="AddJumbledSentence.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Admin/AddJumbledSentence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-201">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="119">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -211,7 +184,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -380,8 +353,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -782,11 +755,12 @@
       <workItem from="1494299217381" duration="4829000" />
       <workItem from="1494304235587" duration="374000" />
       <workItem from="1494305257853" duration="733000" />
+      <workItem from="1494336990873" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73835000" />
+    <option name="totallyTimeSpent" value="74452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1032" height="732" extended-state="0" />
@@ -1197,11 +1171,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/SentenceJumbler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,8 +1195,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/AddJumbledSentence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-201">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="119">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
           <folding />
         </state>
       </provider>
