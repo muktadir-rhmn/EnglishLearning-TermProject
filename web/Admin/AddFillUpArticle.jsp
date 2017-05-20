@@ -5,7 +5,7 @@
 --%>
 
 <jsp:include page="../Resources/header/admin_header.jsp">
-    <jsp:param name="title" value="Add Jumbled Sentence" />
+    <jsp:param name="title" value="Add Article Practise" />
     <jsp:param name="newLessonSideBar" value="active" />
 </jsp:include>
 <%-- ******************************************************** --%>
@@ -19,7 +19,7 @@
         session.removeAttribute("msg");
     }
 %>
-<form action="AddJumbledSentence.do" method="post" class="form-horizontal">
+<form action="AddFillUpArticle.do" method="post" class="form-horizontal">
     <!--sentences text box-->
     <div class="form-group">
         <label for="sentences" class="control-label col-sm-2">Sentences</label>
@@ -33,7 +33,7 @@
     <div class="form-group">
         <div class="control-label col-sm-2"></div>
         <div class="col-sm-10">
-            <input type="submit" value="Jumble & Store" class="btn btn-primary"/>
+            <input type="submit" value="Make Fill In the Blanks & Store" class="btn btn-primary"/>
         </div>
     </div>
     <br/>
