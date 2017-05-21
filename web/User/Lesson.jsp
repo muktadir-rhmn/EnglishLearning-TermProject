@@ -41,7 +41,16 @@
                     <li ><a href="#about">Vocabulary</a></li>
                     <li ><a href="#contact">Practice</a></li>
                     <li class="active"><a href="ArticlePractise.jsp">Grammar</a></li>
-
+                    <li>
+                        <form action="showSearchLesson.jsp" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input id="searchWord" type="text" class="form-control" placeholder="Search Lesson" name="lesson">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -65,8 +74,6 @@
         </div>
     </div>
             <div id="content">
-            <%
-            %>
             </div>
     </body>
 </html>

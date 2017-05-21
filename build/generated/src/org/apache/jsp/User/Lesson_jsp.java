@@ -88,7 +88,16 @@ public final class Lesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <li ><a href=\"#about\">Vocabulary</a></li>\n");
       out.write("                    <li ><a href=\"#contact\">Practice</a></li>\n");
       out.write("                    <li class=\"active\"><a href=\"ArticlePractise.jsp\">Grammar</a></li>\n");
-      out.write("\n");
+      out.write("                    <li>\n");
+      out.write("                        <form action=\"showSearchLesson.jsp\" method=\"get\" class=\"navbar-form\" role=\"search\">\n");
+      out.write("                        <div class=\"input-group\">\n");
+      out.write("                            <input id=\"searchWord\" type=\"text\" class=\"form-control\" placeholder=\"Search Lesson\" name=\"word\">\n");
+      out.write("                            <div class=\"input-group-btn\">\n");
+      out.write("                                <button class=\"btn btn-default\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i></button>\n");
+      out.write("                            </div>\n");
+      out.write("                        </div>\n");
+      out.write("                        </form>\n");
+      out.write("                    </li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
       out.write("        </nav>\n");
@@ -120,10 +129,6 @@ public final class Lesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("            <div id=\"content\">\n");
-      out.write("            ");
-
-            
-      out.write("\n");
       out.write("            </div>\n");
       out.write("    </body>\n");
       out.write("</html>\n");

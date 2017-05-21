@@ -88,4 +88,23 @@ public class Lesson {
         }
         return null;
     }
+    public Pair<String, String> getLesson(String name){
+        DataAccess da = DataAccess.getDataAccess();
+        String sql = "Select * from LESSON where title = ?";
+        try {
+            PreparedStatement stmt = da.getStatement(sql);
+            stmt = da.getStatement(sql);
+            stmt.setString(1, name);
+            ResultSet rs1 = stmt.executeQuery();
+            while(rs1.next()){
+                String title = rs1.getString("TITLE");
+                String content = rs1.getString("CONTENT");
+                Pair obj = new Pair(title, content);
+                return obj;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -3,33 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Practice/SentenceManager.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Practice/JumbledSentence.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewLesson.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/EntityLevel.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/AddFillUpArticle.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/AddFillUpPreposition.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/MdlJumbledSentence.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Practice/SentenceJumbler.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/ArticlePractice.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/NewLesson.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewWordGroup.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/nbproject/build-impl.xml</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/Entity.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/AddFillUpPreposition.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/WordGroup.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showLesson.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showWord.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/Lesson.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showSearchLesson.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showSearchWord.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/word.jsp</file>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/Word.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/AddJumbledSentence.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Database/DataAccess.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/NewWord.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Admin/EnterPractices.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Admin/NewWord.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Practice/PracticeGenerator.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/PrepostionPractise.jsp</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/wordExample.java</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showWordGroup.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showWordList.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/Resources/header/user_header.jsp</file>
+            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/showLessonList.jsp</file>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/JumbledSentence.jsp</file>
             <file>file:/C:/Users/user/Desktop/EnglishLearning/src/Model/Lesson.java</file>
-            <file>file:/C:/Users/user/Desktop/EnglishLearning/web/User/SentenceMatching.jsp</file>
         </group>
     </open-files>
 </project-private>

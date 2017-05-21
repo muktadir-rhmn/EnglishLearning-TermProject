@@ -151,4 +151,26 @@ public class Word {
         }
         return null;
     }
+    
+    public Word getWord(String name){
+        DataAccess da = DataAccess.getDataAccess();
+        String sql = "Select * from WORD where WORD = ?";
+        try {
+            PreparedStatement stmt = da.getStatement(sql);
+            stmt = da.getStatement(sql);
+            stmt.setString(1, name);
+            ResultSet rs1 = stmt.executeQuery();
+            if(rs1.next()){
+                int id = rs1.getInt("ENTITY_ID");
+                String title = rs1.getString("WORD");
+                String meaning = rs1.getString("meaning");
+                String partsofSpeech = rs1.getString("PARTS_OF_SPEECH");
+                Word obj = new Word(id,title, meaning, partsofSpeech);
+                return obj;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
