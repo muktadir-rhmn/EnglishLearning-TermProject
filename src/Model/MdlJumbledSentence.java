@@ -44,7 +44,32 @@ public class MdlJumbledSentence {
 
         String sql = "SELECT *\n" +
                 "FROM (SELECT *\n" +
-                "FROM JUMBLED_SENTENCE\n" +
+                "FROM JUMBLED_SENTENCE\n"
+                + "WHERE TYPE=0\n" +
+                "ORDER BY DBMS_RANDOM.RANDOM)\n" +
+                "WHERE ROWNUM =1\n";
+
+        DataAccess da = DataAccess.getDataAccess();
+
+        try {
+            PreparedStatement stmt = da.getStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();//assumed there is always at least one entry.
+            ret.sentence = rs.getString("JUMBLED_SENTENCE");
+            ret.correctOrderStr = rs.getString("CORRECT_ORDER");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ret;
+    }
+    
+    public static JumbledSentence getRandomWord(){
+        JumbledSentence ret = new JumbledSentence();
+
+        String sql = "SELECT *\n" +
+                "FROM (SELECT *\n" +
+                "FROM JUMBLED_SENTENCE\n"
+                + "WHERE TYPE=1\n" +
                 "ORDER BY DBMS_RANDOM.RANDOM)\n" +
                 "WHERE ROWNUM =1\n";
 

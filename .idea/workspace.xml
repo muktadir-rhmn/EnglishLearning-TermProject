@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="56b89044-9cc0-486a-9b35-81e933af2551" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Admin/AddFillUpArticle.java" />
       <change type="DELETED" beforePath="C:\Users\user\Desktop\EnglishLearning\build\web\WEB-INF\classes\Practice\Pair.class" afterPath="" />
@@ -49,11 +50,17 @@
       <file leaf-file-name="SentenceJumbler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Practice/SentenceJumbler.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="34">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding />
+=======
             <state vertical-scroll-proportion="0.0">
               <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> f95f601a276371480a85c41d26e51a847565644a
             </state>
           </provider>
         </entry>
@@ -71,8 +78,13 @@
       <file leaf-file-name="AddJumbledSentence.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Admin/AddJumbledSentence.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="119">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+=======
             <state vertical-scroll-proportion="0.0">
               <caret line="34" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+>>>>>>> f95f601a276371480a85c41d26e51a847565644a
               <folding />
             </state>
           </provider>
@@ -263,6 +275,10 @@
       <sortByType />
     </navigator>
     <panes>
+<<<<<<< HEAD
+      <pane id="Scratches" />
+=======
+>>>>>>> f95f601a276371480a85c41d26e51a847565644a
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -438,7 +454,10 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
+=======
       <pane id="Scratches" />
+>>>>>>> f95f601a276371480a85c41d26e51a847565644a
       <pane id="Scope" />
     </panes>
   </component>
@@ -745,11 +764,12 @@
       <workItem from="1494299217381" duration="4829000" />
       <workItem from="1494304235587" duration="374000" />
       <workItem from="1494305257853" duration="733000" />
+      <workItem from="1494336990873" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73835000" />
+    <option name="totallyTimeSpent" value="74452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1120,8 +1140,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Admin/AddJumbledSentence.jsp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+=======
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+>>>>>>> f95f601a276371480a85c41d26e51a847565644a
           <folding />
         </state>
       </provider>
@@ -1144,11 +1169,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Practice/PracticeGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="119">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding />
+=======
         <state vertical-scroll-proportion="1.3948718">
           <caret line="124" column="38" selection-start-line="124" selection-start-column="38" selection-end-line="124" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+>>>>>>> f95f601a276371480a85c41d26e51a847565644a
         </state>
       </provider>
     </entry>
