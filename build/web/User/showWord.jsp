@@ -23,8 +23,40 @@
     <<!-- Bootstrap Core CSS -->
     <link href="../Resources/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="../Resources/js/jqueryUI/jquery-ui.structure.min.css" rel="stylesheet"> 
+    <link href="../Resources/js/jqueryUI/jquery-ui.theme.min.css" rel="stylesheet"> 
+    
+    <script src="../Resources/js/jquery.js" ></script>
     <script src="../Resources/js/canvasFramework/easeljs-0.8.2.min.js"></script>
-        
+    <script src="../Resources/js/jqueryUI/jquery-ui.min.js"></script>
+      <script>
+          <%
+    Word obj = new Word();
+    ArrayList<Word> array = obj.getAllWord();
+    ArrayList<String> array1 = new ArrayList<String>();
+    for(int i = 0; i < array.size(); i++){
+        array1.add(array.get(i).getWord());
+    }
+    ;
+    StringBuffer sb = new StringBuffer();
+    sb.append("[");
+    for(int i=0; i<array1.size(); i++){
+        sb.append("\"").append(array1.get(i)).append("\"");
+        if(i+1 < array1.size()){
+            sb.append(",");
+        }
+    }
+    sb.append("]");
+    String arr = sb.toString();
+    %>
+  $( function() {
+    
+    var availableTags = <%=arr%>;
+    $( "#searchWord" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>  
     </head>
     <body>
         <body>
@@ -38,10 +70,10 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li ><a href="#">Home</a></li>
-                    <li ><a href="#about">Vocabulary</a></li>
-                    <li ><a href="#contact">Practice</a></li>
-                    <li class="active"><a href="ArticlePractise.jsp">Grammar</a></li>
+                    <li ><a href="home.jsp">Home</a></li>
+                    <li class="active"><a href="showWord.jsp">Vocabulary</a></li>
+                    <li ><a href="practice.jsp">Practice</a></li>
+                    <li><a href="Lesson.jsp">Grammar</a></li>
                     <li>
                     <form action="showSearchWord.jsp" method="get" class="navbar-form" role="search">
                     <div class="input-group">
@@ -51,7 +83,7 @@
                         </div>
                     </div>
                     </form>
-                    </li>
+                </li>
                 </ul>
             </div>
         </nav>
@@ -89,8 +121,8 @@
             <br>
             <b>Parts of Speech:</b><br><br><i><%=partsofSpeech%></i><br><br>
             <%
-                Word obj = new Word();
-                ArrayList<String> example = obj.getExamples(id);
+                Word ob = new Word();
+                ArrayList<String> example = ob.getExamples(id);
                 for(String tmp:example){
             %>
             <b>Example:</b><br><br><i><%=tmp%></i><br>

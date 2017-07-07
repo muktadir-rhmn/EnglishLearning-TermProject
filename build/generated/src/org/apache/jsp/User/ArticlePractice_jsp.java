@@ -3,6 +3,9 @@ package org.apache.jsp.User;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
+import Model.Word;
+import java.util.Random;
 import Model.Practice;
 import javafx.util.Pair;
 
@@ -48,6 +51,9 @@ public final class ArticlePractice_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -56,9 +62,50 @@ public final class ArticlePractice_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("\n");
       out.write("    <<!-- Bootstrap Core CSS -->\n");
       out.write("    <link href=\"../Resources/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
-      out.write("\n");
+      out.write("    <link href=\"../Resources/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
+      out.write("    <link href=\"../Resources/js/jqueryUI/jquery-ui.min.css\" rel=\"stylesheet\"> \n");
+      out.write("    <link href=\"../Resources/js/jqueryUI/jquery-ui.structure.min.css\" rel=\"stylesheet\"> \n");
+      out.write("    <link href=\"../Resources/js/jqueryUI/jquery-ui.theme.min.css\" rel=\"stylesheet\"> \n");
+      out.write("    \n");
+      out.write("    <script src=\"../Resources/js/jquery.js\" ></script>\n");
       out.write("    <script src=\"../Resources/js/canvasFramework/easeljs-0.8.2.min.js\"></script>\n");
-      out.write("        \n");
+      out.write("    <script src=\"../Resources/js/jqueryUI/jquery-ui.min.js\"></script>\n");
+      out.write("      <script>\n");
+      out.write("          ");
+
+    Word obj = new Word();
+    ArrayList<Word> array = obj.getAllWord();
+    ArrayList<String> array1 = new ArrayList<String>();
+    for(int i = 0; i < array.size(); i++){
+        array1.add(array.get(i).getWord());
+    }
+    ;
+    StringBuffer sb = new StringBuffer();
+    sb.append("[");
+    for(int i=0; i<array1.size(); i++){
+        sb.append("\"").append(array1.get(i)).append("\"");
+        if(i+1 < array1.size()){
+            sb.append(",");
+        }
+    }
+    sb.append("]");
+    String arr = sb.toString();
+    
+      out.write("\n");
+      out.write("  $( function() {\n");
+      out.write("    \n");
+      out.write("    var availableTags = ");
+      out.print(arr);
+      out.write(";\n");
+      out.write("    $( \"#searchWord\" ).autocomplete({\n");
+      out.write("      source: availableTags\n");
+      out.write("    });\n");
+      out.write("  } );\n");
+      out.write("    <script src=\"../Resources/js/canvasFramework/easeljs-0.8.2.min.js\"></script>\n");
+      out.write("    <script>\n");
+      out.write("        function showResult() {\n");
+      out.write("        }\n");
+      out.write("    </script>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <body onload=\"init();\">\n");
@@ -72,8 +119,8 @@ public final class ArticlePractice_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("            <div class=\"container\">\n");
       out.write("                <ul class=\"nav navbar-nav\">\n");
       out.write("                    <li ><a href=\"#\">Home</a></li>\n");
-      out.write("                    <li ><a href=\"#about\">Vocabulary</a></li>\n");
-      out.write("                    <li ><a href=\"#contact\">Grammar</a></li>\n");
+      out.write("                    <li ><a href=\"word.jsp\">Vocabulary</a></li>\n");
+      out.write("                    <li ><a href=\"Lesson.jsp\">Grammar</a></li>\n");
       out.write("                    <li class=\"active\"><a href=\"ArticlePractice.jsp\">Practice</a></li>\n");
       out.write("\n");
       out.write("                </ul>\n");
@@ -103,25 +150,38 @@ public final class ArticlePractice_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("            \n");
       out.write("        ");
 
-                for(int j = 0; j < 3; j++){
-                    options = temp.getValue()[j];
-        
+            Random rand = new Random();
+                int idx = Math.abs(rand.nextInt() % 3);
+                boolean[] visited = new boolean[3];
+                for(int k = 0; k < 3; k++){
+                    visited[k] = false;
+                }
+                int cnt = 0;
+                while(true){
+                    if(visited[idx]==false){
+                        options = temp.getValue()[idx];
+                        visited[idx] = true;
+                        
       out.write("\n");
-      out.write("            <input type=\"checkbox\" value=");
+      out.write("                        <input type=\"radio\" value=");
       out.print(options);
       out.write(" name=\"Select\">\n");
-      out.write("            ");
+      out.write("                        ");
       out.print(options);
       out.write("\n");
-      out.write("            <br>        \n");
-      out.write("        ");
+      out.write("                        <br>\n");
+      out.write("                        ");
 
-                }
+                        cnt++;
+                    }
+                    idx = Math.abs(rand.nextInt() % 3);
+                    if(cnt==3)break;
+                }  
             }
         
       out.write("\n");
       out.write("        <button onclick=\"location.reload()\"  class=\"btn btn-danger\">Try Another</button>\n");
-      out.write("        <button class=\"btn btn-danger\">Show Result</button>\n");
+      out.write("        <button onclick=\"showResult()\"  class=\"btn btn-danger\">Show Result</button>\n");
       out.write("    </div>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

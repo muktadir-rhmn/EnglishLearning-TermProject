@@ -146,3 +146,31 @@ margin : 0.5em auto;
 float : left;
 padding-left : 15px;
 }
+.imgContainer{
+    float:left;
+}
+.main_block {
+    width: 800px;
+}
+
+.main_block:before, .main_block:after {
+    overflow: hidden;
+    content: "";
+    display: table;
+}
+
+.main_block:after {
+    clear: both;
+}
+
+.inner_block {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.inner_block img {
+    width: 50%;
+    height: auto;
+    vertical-align: middle;
+}

@@ -3,6 +3,9 @@ package org.apache.jsp.User;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.ArrayList;
+import Model.Word;
+import Model.Word;
 import Model.Practice;
 import javafx.util.Pair;
 import java.util.Random;
@@ -44,6 +47,9 @@ public final class SentenceMatching_jsp extends org.apache.jasper.runtime.HttpJs
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -89,7 +95,45 @@ public final class SentenceMatching_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("    <<!-- Bootstrap Core CSS -->\n");
       out.write("    <link href=\"../Resources/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
       out.write("\n");
+      out.write("     <link href=\"../Resources/js/jqueryUI/jquery-ui.min.css\" rel=\"stylesheet\"> \n");
+      out.write("    <link href=\"../Resources/js/jqueryUI/jquery-ui.structure.min.css\" rel=\"stylesheet\"> \n");
+      out.write("    <link href=\"../Resources/js/jqueryUI/jquery-ui.theme.min.css\" rel=\"stylesheet\"> \n");
+      out.write("    \n");
+      out.write("    <script src=\"../Resources/js/jquery.js\" ></script>\n");
       out.write("    <script src=\"../Resources/js/canvasFramework/easeljs-0.8.2.min.js\"></script>\n");
+      out.write("    <script src=\"../Resources/js/jqueryUI/jquery-ui.min.js\"></script>\n");
+      out.write("      <script>\n");
+      out.write("          ");
+
+    Word obj = new Word();
+    ArrayList<Word> array = obj.getAllWord();
+    ArrayList<String> array1 = new ArrayList<String>();
+    for(int i = 0; i < array.size(); i++){
+        array1.add(array.get(i).getWord());
+    }
+    ;
+    StringBuffer sb = new StringBuffer();
+    sb.append("[");
+    for(int i=0; i<array1.size(); i++){
+        sb.append("\"").append(array1.get(i)).append("\"");
+        if(i+1 < array1.size()){
+            sb.append(",");
+        }
+    }
+    sb.append("]");
+    String arr = sb.toString();
+    
+      out.write("\n");
+      out.write("  $( function() {\n");
+      out.write("    \n");
+      out.write("    var availableTags = ");
+      out.print(arr);
+      out.write(";\n");
+      out.write("    $( \"#searchWord\" ).autocomplete({\n");
+      out.write("      source: availableTags\n");
+      out.write("    });\n");
+      out.write("  } );\n");
+      out.write("  </script>\n");
       out.write("    <script>\n");
       out.write("      \n");
       out.write("      function SentenceMatcher () {\n");
@@ -317,10 +361,19 @@ public final class SentenceMatching_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("            <div class=\"container\">\n");
       out.write("                <ul class=\"nav navbar-nav\">\n");
       out.write("                    <li ><a href=\"#\">Home</a></li>\n");
-      out.write("                    <li ><a href=\"#about\">Vocabulary</a></li>\n");
-      out.write("                    <li ><a href=\"#contact\">Grammar</a></li>\n");
+      out.write("                    <li ><a href=\"word.jsp\">Vocabulary</a></li>\n");
+      out.write("                    <li ><a href=\"Lesson.jsp\">Grammar</a></li>\n");
       out.write("                    <li class=\"active\"><a href=\"JumbledSentence.jsp\">Practice</a></li>\n");
-      out.write("\n");
+      out.write("                    <li>\n");
+      out.write("                    <form action=\"showSearchWord.jsp\" method=\"get\" class=\"navbar-form\" role=\"search\">\n");
+      out.write("                    <div class=\"input-group\">\n");
+      out.write("                        <input id=\"searchWord\" type=\"text\" class=\"form-control\" placeholder=\"Search Word\" name=\"word\">\n");
+      out.write("                        <div class=\"input-group-btn\">\n");
+      out.write("                            <button class=\"btn btn-default\" type=\"submit\"><i class=\"glyphicon glyphicon-search\"></i></button>\n");
+      out.write("                        </div>\n");
+      out.write("                    </div>\n");
+      out.write("                    </form>\n");
+      out.write("                    </li>\n");
       out.write("                </ul>\n");
       out.write("            </div>\n");
       out.write("        </nav>\n");

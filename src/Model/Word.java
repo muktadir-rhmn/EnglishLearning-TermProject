@@ -131,6 +131,28 @@ public class Word {
         }
         return null;
     }
+    public ArrayList<Word> getAllWord(){
+        DataAccess da = DataAccess.getDataAccess();
+        String sql = "Select * from WORD";
+        ArrayList<Word> List = new ArrayList<>(); 
+        try {
+            PreparedStatement stmt = da.getStatement(sql);
+            stmt = da.getStatement(sql);
+            ResultSet rs1 = stmt.executeQuery();
+            while(rs1.next()){
+                int id = rs1.getInt("ENTITY_ID");
+                String title = rs1.getString("WORD");
+                String meaning = rs1.getString("meaning");
+                String partsofSpeech = rs1.getString("PARTS_OF_SPEECH");
+                Word obj = new Word(id,title, meaning, partsofSpeech);
+                List.add(obj);
+            }
+            return List;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
     
     public ArrayList<String> getExamples(int id){
         DataAccess da = DataAccess.getDataAccess();

@@ -37,10 +37,10 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li ><a href="#">Home</a></li>
-                    <li ><a href="#about">Vocabulary</a></li>
-                    <li ><a href="#contact">Practice</a></li>
-                    <li class="active"><a href="ArticlePractise.jsp">Grammar</a></li>
+                    <li ><a href="home.jsp">Home</a></li>
+                    <li ><a href="practice.jsp">Practice</a></li>
+                    <li ><a href="word.jsp">Vocabulary</a></li>
+                    <li class="active"><a href="showSearchLesson.jsp">Grammar</a></li>
                     <li>
                         <form action="showSearchLesson.jsp" method="get" class="navbar-form" role="search">
                         <div class="input-group">
