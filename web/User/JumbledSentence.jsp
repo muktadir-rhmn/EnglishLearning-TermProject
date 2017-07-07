@@ -162,17 +162,10 @@
             </div>
         </nav>
     </div>
-
-    <div id="sidebar">
-
-
-
-        <div class="list-group">
-
-            <a href="#" class="list-group-item">Jumbled Sentence</a>
-
-        </div>
-    </div>
+    
+    <jsp:include page="sidebarPractice.jsp">
+        <jsp:param name="sentencePractice" value="background: rgb(234,242,200);" />
+    </jsp:include>
 
     <div id="content">
 

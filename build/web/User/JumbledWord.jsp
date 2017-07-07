@@ -116,15 +116,12 @@
             </div>
         </nav>
     </div>
-
-    <div id="sidebar">
-        <div class="list-group">
-
-            <a href="#" class="list-group-item">Jumbled Sentence</a>
-
-        </div>
-    </div>
-
+    
+    
+    <jsp:include page="sidebarPractice.jsp">
+        <jsp:param name="wordPractice" value="background: rgb(234,242,200);" />
+    </jsp:include>
+    
     <div id="content">
 
         <canvas id="demoCanvas" width="500" height="200" ></canvas>

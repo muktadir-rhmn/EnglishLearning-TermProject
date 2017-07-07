@@ -59,6 +59,8 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("    <!-- jQuery -->\n");
       out.write("    <script src=\"../Resources/js/jquery.js\"></script>\n");
+      out.write("    <!-- Bootstrap Core JavaScript -->\n");
+      out.write("    <script src=\"../Resources/js/bootstrap.min.js\"></script>\n");
       out.write("    <script>\n");
       out.write("        \n");
       out.write("        $('.message a').click(function(){\n");

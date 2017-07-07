@@ -33,20 +33,17 @@
                     <li ><a href="#">Home</a></li>
                     <li ><a href="#about">Vocabulary</a></li>
                     <li ><a href="#contact">Grammar</a></li>
-                    <li class="active"><a href="ArticlePractise.jsp">Practice</a></li>
+                    <li class="active"><a href="ArticlePractice.jsp">Practice</a></li>
 
                 </ul>
             </div>
         </nav>
     </div>
-
-    <div id="sidebar">
-        <div class="list-group">
-
-            <a href="#" class="list-group-item">Article Practice</a>
-
-        </div>
-    </div>
+    
+    <jsp:include page="sidebarPractice.jsp">
+        <jsp:param name="articlePractice" value="background: rgb(234,242,200);" />
+    </jsp:include>
+    
     <div id="content">
         <%
             String problem, options;

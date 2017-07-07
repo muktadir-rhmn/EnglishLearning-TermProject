@@ -51,13 +51,9 @@
         </nav>
     </div>
 
-    <div id="sidebar">
-        <div class="list-group">
-
-            <a href="#" class="list-group-item">Preposition Practice</a>
-
-        </div>
-    </div>
+    <jsp:include page="sidebarPractice.jsp">
+        <jsp:param name="prepositionPractice" value="background: rgb(234,242,200);" />
+    </jsp:include>
     <div id="content">
         <%
             
