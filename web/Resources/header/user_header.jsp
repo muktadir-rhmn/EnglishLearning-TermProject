@@ -22,7 +22,7 @@
                     <li class="${param.vocabularyActive}"><a href="#about">Vocabulary</a></li>
                     <li class="${param.GrammarActive}"><a href="#contact">Grammar</a></li>
                     <li class="${param.GrammarActive}"><a href="JumbledSentence.jsp">Practice</a></li>
-
+                    <li class="${param.GrammarActive}"><a href="JumbledSentence.jsp">Practice</a></li>
                 </ul>
             </div>
         </nav>

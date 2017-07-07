@@ -3,6 +3,14 @@
     Created on : Apr 26, 2017, 9:16:55 AM
     Author     : MUKTADIR
 --%>
+ <%
+if(session.getAttribute("adminLogin") == null || !((String)session.getAttribute("adminLogin")).equals("true")){
+        out.print(
+            "You must login..."
+        );
+        return;
+    }
+%>
 
 <%@page import="java.util.Comparator"%>
 <%@page import="java.util.Collections"%>
@@ -16,6 +24,7 @@
 </jsp:include>
 <%-- ******************************************************** --%>
 <%
+   
     String msg = (String) session.getAttribute("msg");
     if(msg != null){
         out.print(

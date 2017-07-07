@@ -17,7 +17,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name="NewLesson", urlPatterns={"/Admin/NewLesson.do"})
 public class NewLesson extends HttpServlet {
    
-    
     protected void processRequest(HttpServletRequest req, HttpServletResponse res)
     throws ServletException, IOException{
         PrintWriter out = res.getWriter();
@@ -27,6 +26,9 @@ public class NewLesson extends HttpServlet {
         Integer result = Integer.valueOf(level);
         String title = req.getParameter("title");
         String body = req.getParameter("body");
+        System.out.print(level);
+        System.out.print(title);
+        System.out.print(body);
         Entity obj = new Entity();
         if(result == 0){
             Lesson obj2 = new Lesson(title, body, 0, 1);

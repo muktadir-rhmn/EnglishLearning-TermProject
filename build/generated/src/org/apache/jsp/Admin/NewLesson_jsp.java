@@ -61,8 +61,11 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
 
       out.write("\r\n");
       out.write("\r\n");
+      out.write("<script>\r\n");
       out.write("\r\n");
-      out.write("<form action=\"NewLesson.do\" method=\"get\" class=\"form-horizontal\">\r\n");
+      out.write("</script>\r\n");
+      out.write("\r\n");
+      out.write("<form id=\"lessonForm\" action=\"NewLesson.do\" method=\"get\" class=\"form-horizontal\">\r\n");
       out.write("    <!--level selection-->\r\n");
       out.write("    <div class=\"form-group\">\r\n");
       out.write("        <div class=\"col-sm-1\">\r\n");
@@ -100,7 +103,7 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <!--/level selection-->\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("    <input type=\"hidden\" name=\"body\" value=\"fjasdlfk\"/>\r\n");
+      out.write("    <input type=\"hidden\" id=\"LessonBody\" name=\"body\" value=\"fjasdlfk\"/>\r\n");
       out.write("    <!--Title text box-->\r\n");
       out.write("    <div class=\"form-group\">\r\n");
       out.write("        <label for=\"title\" class=\"control-label col-sm-1\">Title</label>\r\n");
@@ -119,7 +122,7 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </div>\r\n");
       out.write("    <!--/Text Editor-->\r\n");
       out.write("    <br>\r\n");
-      out.write("    <input type=\"submit\" value=\"Post\" class=\"btn btn-primary btn-lg\">\r\n");
+      out.write("    <input type=\"button\" onclick=\"sendLesson();\" value=\"Post\" class=\"btn btn-primary btn-lg\">\r\n");
       out.write("</form>\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -137,7 +140,8 @@ public final class NewLesson_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <!--Level from-->\r\n");
       out.write("                <form action=\"NewLevel.do\" class=\"form-horizontal\">\r\n");
       out.write("                    <fieldset>\r\n");
-      out.write("                        <input type=\"hidden\" name=\"levelType\" value=\"1\"/>\r\n");
+      out.write("                        <input type=\"hidden\" id=\"levelType\" name=\"levelType\" value=\"1\"/>\r\n");
+      out.write("\r\n");
       out.write("                        <!-- Text input-->\r\n");
       out.write("                        <div class=\"form-group\">\r\n");
       out.write("                            <label class=\"col-md-4 control-label\" for=\"levelTitle\">Title</label>\r\n");

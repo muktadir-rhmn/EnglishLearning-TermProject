@@ -8,8 +8,45 @@
 
     <<!-- Bootstrap Core CSS -->
     <link href="../Resources/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="../Resources/js/jqueryUI/jquery-ui.min.css" rel="stylesheet"> 
+    <link href="../Resources/js/jqueryUI/jquery-ui.structure.min.css" rel="stylesheet"> 
+    <link href="../Resources/js/jqueryUI/jquery-ui.theme.min.css" rel="stylesheet"> 
+    
+    <script src="../Resources/js/jquery.js" ></script>
     <script src="../Resources/js/canvasFramework/easeljs-0.8.2.min.js"></script>
+    <script src="../Resources/js/jqueryUI/jquery-ui.min.js"></script>
+      <script>
+          
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#searchWord" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
     <script>
         /********************************Dragging Circle*****************************/
         /*Reference: http://www.createjs.com/tutorials/Mouse%20Interaction/ */
@@ -111,7 +148,16 @@
                     <li ><a href="#about">Vocabulary</a></li>
                     <li ><a href="#contact">Grammar</a></li>
                     <li class="active"><a href="JumbledSentence.jsp">Practice</a></li>
-
+                    <li>
+                        <form action="showWord.jsp" method="get" class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input id="searchWord" type="text" class="form-control" placeholder="Search" name="word">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                            </div>
+                        </div>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </nav>

@@ -118,9 +118,6 @@
     </div>
 
     <div id="sidebar">
-
-
-
         <div class="list-group">
 
             <a href="#" class="list-group-item">Jumbled Sentence</a>
