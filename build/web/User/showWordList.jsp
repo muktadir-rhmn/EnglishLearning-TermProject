@@ -71,7 +71,7 @@
             <div class="container">
                 <ul class="nav navbar-nav">
                     <li ><a href="home.jsp">Home</a></li>
-                    <li class="active"><a href="showWordList.jsp">Vocabulary</a></li>
+                    <li class="active"><a href="word.jsp">Vocabulary</a></li>
                     <li ><a href="practice.jsp">Practice</a></li>
                     <li><a href="Lesson.jsp">Grammar</a></li>
                     <li>
@@ -98,8 +98,16 @@
                     Pair<String, Integer> tmp = itr.next();
                     String temp = tmp.getKey();
                     Integer no = tmp.getValue();
+            %><%
+            if(no==Integer.valueOf(request.getParameter("levelID"))){
             %>
-            <a href="showWordGroup.jsp?levelID=<%=no%>" class="list-group-item"><%=temp%></a>
+            <a href="showWordGroup.jsp?levelID=<%=no%>" class="list-group-item" style="background: rgb(234,242,200)"><%=temp%></a>
+            <%}%>
+            <%
+            if(no!=Integer.valueOf(request.getParameter("levelID"))){
+            %>
+            <a href="showWordGroup.jsp?levelID=<%=no%>" class="list-group-item" ><%=temp%></a>
+            <%}%>
             <%
             }
             %>
@@ -118,7 +126,7 @@
                     String partsofSpeech = List.get(i).getPartsofSpeech();
                     int entity_id = List.get(i).getEntityID();
             %>
-            <a href="showWord.jsp?word=<%=word%>&meaning=<%=meaning%>&partsofSpeech=<%=partsofSpeech%>&entity_id=<%=entity_id%>" ><font size="5"><%=word%></font></a>
+            <a href="showWord.jsp?levelID=<%=request.getParameter("levelID")%>&word=<%=word%>&meaning=<%=meaning%>&partsofSpeech=<%=partsofSpeech%>&entity_id=<%=entity_id%>" ><font size="5"><%=word%></font></a>
             </br>
             <%
             }

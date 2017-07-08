@@ -99,7 +99,16 @@
                     String temp = tmp.getKey();
                     Integer no = tmp.getValue();
             %>
-            <a href="showWordGroup.jsp?levelID=<%=no%>" class="list-group-item"><%=temp%></a>
+            <%
+            if(no==Integer.valueOf(request.getParameter("levelID"))){
+            %>
+            <a href="showWordGroup.jsp?levelID=<%=no%>" class="list-group-item" style="background: rgb(234,242,200)"><%=temp%></a>
+            <%}%>
+            <%
+            if(no!=Integer.valueOf(request.getParameter("levelID"))){
+            %>
+            <a href="showWordGroup.jsp?levelID=<%=no%>" class="list-group-item" ><%=temp%></a>
+            <%}%>
             <%
             }
             %>
@@ -115,7 +124,7 @@
                     String title = List.get(i).getKey();
                     int value = List.get(i).getValue();
             %>
-            <a href="showWordList.jsp?content=<%=value%>&title=<%=title%>" ><font size="5"><%=title%></font></a>
+            <a href="showWordList.jsp?content=<%=value%>&title=<%=title%>&levelID=<%=request.getParameter("levelID")%>"  ><font size="5"><%=title%></font></a>
             </br>
             <%
                 }
