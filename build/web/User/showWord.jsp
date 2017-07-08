@@ -71,7 +71,7 @@
             <div class="container">
                 <ul class="nav navbar-nav">
                     <li ><a href="home.jsp">Home</a></li>
-                    <li class="active"><a href="showWord.jsp">Vocabulary</a></li>
+                    <li class="active"><a href="word.jsp">Vocabulary</a></li>
                     <li ><a href="practice.jsp">Practice</a></li>
                     <li><a href="Lesson.jsp">Grammar</a></li>
                     <li>

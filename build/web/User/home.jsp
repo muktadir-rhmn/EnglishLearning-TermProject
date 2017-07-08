@@ -120,7 +120,7 @@
     </div>
 
     <div class="inner_block">
-        <h2>Vocabulary</h2>
+        <h2>Grammer</h2>
     <a href="Lesson.jsp">
     <img src="../Resources/images/user/grammer.png" alt="Mountain View" >
     </a>

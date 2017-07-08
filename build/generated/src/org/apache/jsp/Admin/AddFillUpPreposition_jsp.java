@@ -41,12 +41,13 @@ public final class AddFillUpPreposition_jsp extends org.apache.jasper.runtime.Ht
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write('\n');
-      out.write('\n');
+      out.write("\r\n");
+      out.write("\r\n");
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/header/admin_header.jsp" + "?" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("title", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("Add Preposition Practise", request.getCharacterEncoding()) + "&" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("newLessonSideBar", request.getCharacterEncoding())+ "=" + org.apache.jasper.runtime.JspRuntimeLibrary.URLEncode("active", request.getCharacterEncoding()), out, false);
+      out.write('\r');
       out.write('\n');
-      out.write('\n');
-      out.write('\n');
+      out.write("\r\n");
+      out.write("\r\n");
 
     String msg = (String) session.getAttribute("msg");
     if(msg != null){
@@ -56,27 +57,28 @@ public final class AddFillUpPreposition_jsp extends org.apache.jasper.runtime.Ht
         session.removeAttribute("msg");
     }
 
-      out.write("\n");
-      out.write("<form action=\"AddFillUpPreposition.do\" method=\"post\" class=\"form-horizontal\">\n");
-      out.write("    <!--sentences text box-->\n");
-      out.write("    <div class=\"form-group\">\n");
-      out.write("        <label for=\"sentences\" class=\"control-label col-sm-2\">Sentences</label>\n");
-      out.write("        <div class=\"col-sm-10\">\n");
-      out.write("            <textarea name=\"sentences\" id=\"sentences\" class=\"form-control\" placeholder=\"Write some sentences...\"></textarea>\n");
-      out.write("        </div>\n");
-      out.write("    </div>\n");
-      out.write("    <br/>\n");
-      out.write("    <!--/sentences text box-->\n");
-      out.write("    <br>\n");
-      out.write("    <div class=\"form-group\">\n");
-      out.write("        <div class=\"control-label col-sm-2\"></div>\n");
-      out.write("        <div class=\"col-sm-10\">\n");
-      out.write("            <input type=\"submit\" value=\"Make Fill In the Blanks & Store\" class=\"btn btn-primary\"/>\n");
-      out.write("        </div>\n");
-      out.write("    </div>\n");
-      out.write("    <br/>\n");
-      out.write("</form>\n");
-      out.write("\n");
+      out.write("\r\n");
+      out.write("<form action=\"AddFillUpPreposition.do\" method=\"post\" class=\"form-horizontal\">\r\n");
+      out.write("    <!--sentences text box-->\r\n");
+      out.write("    <div class=\"form-group\">\r\n");
+      out.write("        <label for=\"sentences\" class=\"control-label col-sm-2\">Sentences</label>\r\n");
+      out.write("        <div class=\"col-sm-10\">\r\n");
+      out.write("            <textarea name=\"sentences\" id=\"sentences\" class=\"form-control\" placeholder=\"Write some sentences...\"></textarea>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    <br/>\r\n");
+      out.write("    <!--/sentences text box-->\r\n");
+      out.write("    <br>\r\n");
+      out.write("    <div class=\"form-group\">\r\n");
+      out.write("        <div class=\"control-label col-sm-2\"></div>\r\n");
+      out.write("        <div class=\"col-sm-10\">\r\n");
+      out.write("            <input type=\"submit\" value=\"Make Fill In the Blanks & Store\" class=\"btn btn-primary\"/>\r\n");
+      out.write("        </div>\r\n");
+      out.write("    </div>\r\n");
+      out.write("    <br/>\r\n");
+      out.write("</form>\r\n");
+      out.write("\r\n");
+      out.write('\r');
       out.write('\n');
       org.apache.jasper.runtime.JspRuntimeLibrary.include(request, response, "../Resources/footer/admin_footer.jsp", out, false);
     } catch (Throwable t) {

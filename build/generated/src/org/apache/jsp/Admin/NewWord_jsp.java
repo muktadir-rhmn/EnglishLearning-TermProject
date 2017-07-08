@@ -48,6 +48,16 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
       out.write("\r\n");
+      out.write(" ");
+
+if(session.getAttribute("adminLogin") == null || !((String)session.getAttribute("adminLogin")).equals("true")){
+        out.print(
+            "You must login..."
+        );
+        return;
+    }
+
+      out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
@@ -61,11 +71,7 @@ public final class NewWord_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write('\r');
       out.write('\n');
 
-    if(session.getAttribute("adminLogin") == null || !((String)session.getAttribute("adminLogin")).equals("true")){
-        out.print(
-                "<div class='alert alert-success'>You must login...</div>"
-        );
-    }
+   
     String msg = (String) session.getAttribute("msg");
     if(msg != null){
         out.print(
