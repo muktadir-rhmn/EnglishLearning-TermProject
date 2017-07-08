@@ -100,7 +100,16 @@
                     String temp = tmp.getKey();
                     Integer no = tmp.getValue();
             %>
-            <a href="showLessonList.jsp?levelID=<%=no%>" class="list-group-item"><%=temp%></a>
+            <%
+            if(no==Integer.valueOf(request.getParameter("levelID"))){
+            %>
+            <a href="showLessonList.jsp?levelID=<%=no%>" class="list-group-item" style="background: rgb(234,242,200)"><%=temp%></a>
+            <%}%>
+            <%
+            if(no!=Integer.valueOf(request.getParameter("levelID"))){
+            %>
+            <a href="showLesson.jsp?levelID=<%=no%>" class="list-group-item" ><%=temp%></a>
+            <%}%>
             <%
             }
             %>
