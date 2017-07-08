@@ -23,7 +23,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jumbled Sentence - English Learning</title>
+        <title>Home - English Learning</title>
     <link href="../Resources/css/user/style.css" rel="stylesheet" />
 
     <<!-- Bootstrap Core CSS -->

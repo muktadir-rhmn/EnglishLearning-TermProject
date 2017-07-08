@@ -5,7 +5,7 @@
 <!DOCTYPE>
 <html>
 <head>
-    <title>Jumbled Sentence - English Learning</title>
+    <title>Jumbled Word - English Learning</title>
     <link href="../Resources/css/user/style.css" rel="stylesheet" />
 
     <<!-- Bootstrap Core CSS -->

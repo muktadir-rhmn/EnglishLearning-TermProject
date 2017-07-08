@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jumbled Sentence - English Learning</title>
+        <title>Practice - English Learning</title>
     <link href="../Resources/css/user/style.css" rel="stylesheet" />
 
     <<!-- Bootstrap Core CSS -->

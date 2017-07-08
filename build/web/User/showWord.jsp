@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lesson - English Learning</title>
+        <title>Vocabulary - English Learning</title>
     <link href="../Resources/css/user/style.css" rel="stylesheet" />
 
     <<!-- Bootstrap Core CSS -->

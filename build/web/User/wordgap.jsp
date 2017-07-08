@@ -18,7 +18,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Lesson - English Learning</title><link href="../Resources/css/user/style.css" rel="stylesheet" />
+        <title>Vocabulary - English Learning</title>
+        <link href="../Resources/css/user/style.css" rel="stylesheet" />
 
     <<!-- Bootstrap Core CSS -->
     <link href="../Resources/css/bootstrap.min.css" rel="stylesheet">
