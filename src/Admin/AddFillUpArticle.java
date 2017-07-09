@@ -34,7 +34,8 @@ public class AddFillUpArticle extends HttpServlet {
         //extract simple sentences
         SentenceManager sm = new SentenceManager(paragraph);
         ArrayList<String> sentences = sm.getSentences();
-        
+        System.out.print(paragraph);
+        System.out.print(sentences.size());
         //generates jumbled sentences
        /* LinkedList<JumbledSentence> jumbledSentences = SentenceJumbler.getJumbledSentences(sentences);
         for (JumbledSentence s: jumbledSentences){
