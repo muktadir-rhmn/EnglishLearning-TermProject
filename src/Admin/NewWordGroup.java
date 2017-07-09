@@ -30,8 +30,8 @@ public class NewWordGroup extends HttpServlet {
         WordGroup obj = new WordGroup(title, result);
         obj.insertWordGroup();
         
-        session.setAttribute("msg", " successfully added the jumbled word.");
-        res.sendRedirect("AddJumbledSentence.jsp");
+        session.setAttribute("msg", " successfully added the  word group.");
+        res.sendRedirect("NewWord.jsp");
     } 
 
   

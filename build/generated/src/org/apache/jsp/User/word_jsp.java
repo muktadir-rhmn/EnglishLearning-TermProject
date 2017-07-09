@@ -65,7 +65,8 @@ public final class word_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
-      out.write("        <title>Lesson - English Learning</title><link href=\"../Resources/css/user/style.css\" rel=\"stylesheet\" />\r\n");
+      out.write("        <title>Vocabulary - English Learning</title>\r\n");
+      out.write("        <link href=\"../Resources/css/user/style.css\" rel=\"stylesheet\" />\r\n");
       out.write("\r\n");
       out.write("    <<!-- Bootstrap Core CSS -->\r\n");
       out.write("    <link href=\"../Resources/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n");
@@ -76,6 +77,7 @@ public final class word_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <script src=\"../Resources/js/jquery.js\" ></script>\r\n");
       out.write("    <script src=\"../Resources/js/canvasFramework/easeljs-0.8.2.min.js\"></script>\r\n");
       out.write("    <script src=\"../Resources/js/jqueryUI/jquery-ui.min.js\"></script>\r\n");
+      out.write("    \r\n");
       out.write("      <script>\r\n");
       out.write("          ");
 
@@ -101,7 +103,7 @@ public final class word_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  $( function() {\r\n");
       out.write("    \r\n");
       out.write("    var availableTags = ");
-      out.print( arr);
+      out.print(arr);
       out.write(";\r\n");
       out.write("    $( \"#searchWord\" ).autocomplete({\r\n");
       out.write("      source: availableTags\r\n");
@@ -121,7 +123,7 @@ public final class word_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <nav class=\"navbar navbar-default navbar-static-top\">\r\n");
       out.write("            <div class=\"container\">\r\n");
       out.write("                <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                    <li ><a href=\"#\">Home</a></li>\r\n");
+      out.write("                    <li ><a href=\"home.jsp\">Home</a></li>\r\n");
       out.write("                    <li class=\"active\"><a href=\"word.jsp\">Vocabulary</a></li>\r\n");
       out.write("                    <li ><a href=\"practice.jsp\">Practice</a></li>\r\n");
       out.write("                    <li><a href=\"Lesson.jsp\">Grammar</a></li>\r\n");
@@ -165,7 +167,8 @@ public final class word_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("        </div>\r\n");
       out.write("    </div>\r\n");
-      out.write("            <div id=\"content\">\r\n");
+      out.write("             <div id=\"content\">\r\n");
+      out.write("                <b style=\"color:rgb(4,139,132)\" ><font size=\"5\">Please select one of the levels from the side-bar to begin with!</font></b>\r\n");
       out.write("            </div>\r\n");
       out.write("    </body>\r\n");
       out.write("</html>\r\n");
