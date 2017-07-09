@@ -57,11 +57,12 @@
     $( "#searchWord" ).autocomplete({
       source: availableTags
     });
+
   } );
   </script>
 </head>
 
-<form action="wordgroup.do" method="post" class="form-horizontal">
+
    
     <div id="container">
     <div id="banner">
@@ -71,19 +72,18 @@
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li ><a href="home.jsp">Home</a></li>
-                    <li class="active"><a href="word.jsp">Vocabulary</a></li>
-                    <li ><a href="practice.jsp">Practice</a></li>
-                    <li><a href="Lesson.jsp">Grammar</a></li>
+                    <li ><a href="home.jsp">Home</a></li><li ><a href="word.jsp">Vocabulary</a></li>
+                    <li ><a href="Lesson.jsp">Grammar</a></li>
+                    <li class="active"><a href="practice.jsp">Practice</a></li>
                     <li>
-                        <form action="showSearchWord.jsp" method="get" class="navbar-form" role="search">
-                        <div class="input-group">
-                            <input id="searchWord" type="text" class="form-control" placeholder="Search Word" name="word">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-                            </div>
+                    <form action="showSearchWord.jsp" method="get" class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input id="searchWord" type="text" class="form-control" placeholder="Search Word" name="word">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                         </div>
-                        </form>
+                    </div>
+                    </form>
                     </li>
                 </ul>
             </div>
@@ -128,23 +128,58 @@
             
         %>
         <%
+            int cGaps = 0;
+            char [] gapLatter = new char[100];
             for(int i = 0; i < wordLength; i++){
                 if(visited[i]==false){
         %>
         <b style="color:rgb(4,139,132)" ><font size="6"><%=word.charAt(i)%></font></b>
         <%}
         if(visited[i]==true){
+           
         %>
-            <input name="<%=i%>" type="text" style="width:40px;"/>
+        <input name="gap<%=cGaps%>" id="gap<%=cGaps%>" type="text" style="width:40px;"/>
         <%
+            gapLatter[cGaps] = word.toLowerCase().charAt(i);
+            cGaps++;
         }
         %>
         <%}%>
     
         <br/>
         <button onclick="location.reload()"  class="btn btn-danger">Try Another</button>
-        <button name="showresult" onclick="location.reload()"  class="btn btn-danger" >Show Result</button>
+        <button name="showresult" onclick="showResult()"  class="btn btn-danger" >Show Result</button>
     </div>    
     </div>
-    </form>
+    
+        <script>
+            
+            var cGaps = <%=cGaps%>;
+            var corGap = [
+                <%for(int i = 0; i < cGaps ; i++){
+                    out.print("\""+gapLatter[i] + "\",");
+                }
+                %>
+            ];
+            
+            function showResult(){
+             
+                var result = 1;
+                for(var i = 0 ; i < cGaps; i++){
+                    var gap = $("#gap" + i).val();
+                    var corG = corGap[i];
+                    if(gap != corG){
+                        result = 0;
+                        break;
+                    }
+                }
+                if(result == 1){
+                    alert("Correct... :)")
+                    
+                }
+                else{
+                    alert("wrong answer... :(");
+                }
+            }
+        </script>
 </html>

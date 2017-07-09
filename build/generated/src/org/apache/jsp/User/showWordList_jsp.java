@@ -65,7 +65,7 @@ public final class showWordList_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html>\r\n");
       out.write("    <head>\r\n");
-      out.write("        <title>Lesson - English Learning</title>\r\n");
+      out.write("        <title>Vocabulary - English Learning</title>\r\n");
       out.write("    <link href=\"../Resources/css/user/style.css\" rel=\"stylesheet\" />\r\n");
       out.write("\r\n");
       out.write("    <<!-- Bootstrap Core CSS -->\r\n");
@@ -122,8 +122,8 @@ public final class showWordList_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("        <nav class=\"navbar navbar-default navbar-static-top\">\r\n");
       out.write("            <div class=\"container\">\r\n");
       out.write("                <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                    <li ><a href=\"#\">Home</a></li>\r\n");
-      out.write("                    <li class=\"active\"><a href=\"showWordList.jsp\">Vocabulary</a></li>\r\n");
+      out.write("                    <li ><a href=\"home.jsp\">Home</a></li>\r\n");
+      out.write("                    <li class=\"active\"><a href=\"word.jsp\">Vocabulary</a></li>\r\n");
       out.write("                    <li ><a href=\"practice.jsp\">Practice</a></li>\r\n");
       out.write("                    <li><a href=\"Lesson.jsp\">Grammar</a></li>\r\n");
       out.write("                    <li>\r\n");
@@ -152,12 +152,31 @@ public final class showWordList_jsp extends org.apache.jasper.runtime.HttpJspBas
                     String temp = tmp.getKey();
                     Integer no = tmp.getValue();
             
+
+            if(no==Integer.valueOf(request.getParameter("levelID"))){
+            
       out.write("\r\n");
       out.write("            <a href=\"showWordGroup.jsp?levelID=");
       out.print(no);
-      out.write("\" class=\"list-group-item\">");
+      out.write("\" class=\"list-group-item\" style=\"background: rgb(234,242,200)\">");
       out.print(temp);
       out.write("</a>\r\n");
+      out.write("            ");
+}
+      out.write("\r\n");
+      out.write("            ");
+
+            if(no!=Integer.valueOf(request.getParameter("levelID"))){
+            
+      out.write("\r\n");
+      out.write("            <a href=\"showWordGroup.jsp?levelID=");
+      out.print(no);
+      out.write("\" class=\"list-group-item\" >");
+      out.print(temp);
+      out.write("</a>\r\n");
+      out.write("            ");
+}
+      out.write("\r\n");
       out.write("            ");
 
             }
@@ -180,7 +199,9 @@ public final class showWordList_jsp extends org.apache.jasper.runtime.HttpJspBas
                     int entity_id = List.get(i).getEntityID();
             
       out.write("\r\n");
-      out.write("                <a href=\"showWord.jsp?word=");
+      out.write("            <a href=\"showWord.jsp?levelID=");
+      out.print(request.getParameter("levelID"));
+      out.write("&word=");
       out.print(word);
       out.write("&meaning=");
       out.print(meaning);
@@ -188,9 +209,10 @@ public final class showWordList_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.print(partsofSpeech);
       out.write("&entity_id=");
       out.print(entity_id);
-      out.write("\" class=\"list-group-item\">");
+      out.write("\" ><font size=\"5\">");
       out.print(word);
-      out.write("</a>\r\n");
+      out.write("</font></a>\r\n");
+      out.write("            </br>\r\n");
       out.write("            ");
 
             }

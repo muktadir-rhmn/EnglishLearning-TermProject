@@ -99,6 +99,7 @@ public final class JumbledSentence_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("      source: availableTags\r\n");
       out.write("    });\r\n");
       out.write("  } );\r\n");
+      out.write("  </script>\r\n");
       out.write("    <script>\r\n");
       out.write("        /********************************Dragging Circle*****************************/\r\n");
       out.write("        /*Reference: http://www.createjs.com/tutorials/Mouse%20Interaction/ */\r\n");
@@ -204,10 +205,10 @@ public final class JumbledSentence_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        <nav class=\"navbar navbar-default navbar-static-top\">\r\n");
       out.write("            <div class=\"container\">\r\n");
       out.write("                <ul class=\"nav navbar-nav\">\r\n");
-      out.write("                    <li ><a href=\"#\">Home</a></li>\r\n");
+      out.write("                    <li ><a href=\"home.jsp\">Home</a></li>\r\n");
       out.write("                    <li ><a href=\"word.jsp\">Vocabulary</a></li>\r\n");
       out.write("                    <li ><a href=\"Lesson.jsp\">Grammar</a></li>\r\n");
-      out.write("                    <li class=\"active\"><a href=\"JumbledSentence.jsp\">Practice</a></li>\r\n");
+      out.write("                    <li class=\"active\"><a href=\"practice.jsp\">Practice</a></li>\r\n");
       out.write("                    <li>\r\n");
       out.write("                    <form action=\"showSearchWord.jsp\" method=\"get\" class=\"navbar-form\" role=\"search\">\r\n");
       out.write("                    <div class=\"input-group\">\r\n");

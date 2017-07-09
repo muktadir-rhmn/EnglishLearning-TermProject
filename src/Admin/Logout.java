@@ -12,14 +12,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author MUKTADIR
  */
-@WebServlet(name = "Login", urlPatterns = {"/Admin/Login.do"})
-public class Login extends HttpServlet {
+@WebServlet(name = "Logout", urlPatterns = {"/Admin/Logout.do"})
+public class Logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,25 +29,11 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest req, HttpServletResponse res)
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = res.getWriter();
-        HttpSession session = req.getSession();
-        
-        String userName = req.getParameter("userName");
-        String password = req.getParameter("password");
-        
-        
-        
-        if(userName.equals("admin") && password.equals("admin")){
-            session.setAttribute("adminLogin", "true");
-            res.sendRedirect("NewWord.jsp");
-        }
-        else{
-            session.setAttribute("msg", "Invalid Login...");
-            res.sendRedirect("index.jsp");
-        }
-       
+        request.getSession().removeAttribute("adminLogin");
+        request.getSession().setAttribute("msg", "Successfully logged out...");
+            response.sendRedirect("index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
