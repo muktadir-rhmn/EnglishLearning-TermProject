@@ -57,7 +57,7 @@ public final class ArticlePractice_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
-      out.write("        <title>Jumbled Sentence - English Learning</title>\n");
+      out.write("        <title>Article Practice - English Learning</title>\n");
       out.write("    <link href=\"../Resources/css/user/style.css\" rel=\"stylesheet\" />\n");
       out.write("\n");
       out.write("    <<!-- Bootstrap Core CSS -->\n");

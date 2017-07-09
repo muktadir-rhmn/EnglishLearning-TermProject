@@ -61,7 +61,6 @@
   </script>
 </head>
 
-<form action="wordgroup.do" method="post" class="form-horizontal">
    
     <div id="container">
     <div id="banner">
@@ -146,5 +145,4 @@
         <button name="showresult" onclick="location.reload()"  class="btn btn-danger" >Show Result</button>
     </div>    
     </div>
-    </form>
 </html>
